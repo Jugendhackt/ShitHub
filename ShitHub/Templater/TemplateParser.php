@@ -12,9 +12,7 @@ class TemplateParser{
 	}
 
 	private function loadFile(){
-        $doc = new \DOMDocument();
-        $doc->loadHTMLFile($this->filename);
-        $this->html = $doc->saveHTML();
+        $this->html = file_get_contents($this->filename, FILE_USE_INCLUDE_PATH);
     }
     
     public function parse(){
