@@ -17,9 +17,9 @@ class SiteConstructor{
 	}
 
 	public function construct(){
-		$this->load($this->header); //Load header
+		$this->load("header"); //Load header
 		$this->load($this->site); //Load site content
-		$this->load($this->footer); //Load footer
+		$this->load("footer"); //Load footer
 	}
 
 	private function load($what){
