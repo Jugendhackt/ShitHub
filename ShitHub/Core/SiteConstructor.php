@@ -17,10 +17,16 @@ class SiteConstructor{
 	}
 
 	public function construct(){
-		if(in_array($this->site, $this->site_list) && file_exists(__DIR__.'/../../templates/'.$this->site.'.php')){
-			if(class_exists('\\ShitHub\\Modules\\'.$this->site)){
+		$this->load($this->header); //Load header
+		$this->load($this->site); //Load site content
+		$this->load($this->footer); //Load footer
+	}
 
-				$cname = "ShitHub\\Modules\\".$this->site;
+	private function load($what){
+		if(in_array($what, $this->site_list) && file_exists(__DIR__.'/../../templates/'.$what.'.php')){
+			if(class_exists('\\ShitHub\\Modules\\'.$what)){
+
+				$cname = "ShitHub\\Modules\\".$what;
 				$modul = new $cname;
 
 				if(method_exists($modul, 'call_modul')){
@@ -28,7 +34,7 @@ class SiteConstructor{
 				}
 			}
 
-			$this->printpart(__DIR__.'/../../templates/'.$this->site.'.php');
+			$this->printpart(__DIR__.'/../../templates/'.$what.'.php');
 
 		}
 	}
