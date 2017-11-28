@@ -1,0 +1,23 @@
+{
+    "name": "shithub/core",
+    "description": "Core system of ShitHub",
+    "license": "MIT",
+    "keywords": ["shithub"],
+    "authors": [
+        {
+            "name": "anghenfil",
+            "email": "ares@anghenfil.de"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ShitHub\\Core\\": "ShitHub/Core",
+            "ShitHub\\Templater\\": "ShitHub/Templater",
+            "ShitHub\\Modules\\": "ShitHub/Modules"
+        }
+    }
+}
