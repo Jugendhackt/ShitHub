@@ -1,0 +1,15 @@
+body {
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.navbar img {
+    height: 1.5em;
+    margin-right: 0.5em;
+
+}
+.alert {
+   width: auto;
+   text-align: center;
+}
