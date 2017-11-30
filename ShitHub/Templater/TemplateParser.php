@@ -14,7 +14,6 @@ class TemplateParser{
 	private function loadFile(){
         $this->html = file_get_contents($this->filename, FILE_USE_INCLUDE_PATH);
     }
-    
     public function parse(){
         $this->loadFile();
 
@@ -25,6 +24,16 @@ class TemplateParser{
         print($this->html);
     }
     
+    public function parseReturn(){
+        $this->loadFile();
+
+        foreach(self::$array as $key => $value){
+            $this->html = str_replace('{'.$key.'}', self::$array[$key],$this->html);
+        }
+        
+        return $this->html;
+    }
+
     public static function set_variable($key1, $val1){
         self::$array[$key1] = $val1;
     }
