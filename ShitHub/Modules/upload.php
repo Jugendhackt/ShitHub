@@ -17,10 +17,21 @@ class upload{
 				\ShitHub\Templater\TemplateParser::set_variable("upload_form", $parser->parseReturn());
 
 			}else{
-				//Auswerten?site=upload#
-				\ShitHub\Templater\TemplateParser::set_variable("upload_error", "");
-				\ShitHub\Templater\TemplateParser::set_variable("upload_form", "Test");
 				//TODO: Upload file
+
+				if(explode("/", $_FILES['upload_file']['type'])[0] != "text"){
+					\ShitHub\Templater\TemplateParser::set_variable("upload_error_code", "Ungültiges Format!");
+					$parser = new \ShitHub\Templater\TemplateParser("templates/upload_error.php");
+					\ShitHub\Templater\TemplateParser::set_variable("upload_error", $parser->parseReturn());
+					$parser = new \ShitHub\Templater\TemplateParser("templates/upload_form.php");
+					\ShitHub\Templater\TemplateParser::set_variable("upload_form", $parser->parseReturn());
+				}else{
+					//TODO: Add to database, generate id and move file
+					$dbcon = new \ShitHub\SQL\ShitHubSQL();
+
+					\ShitHub\Templater\TemplateParser::set_variable("upload_error", "");
+					\ShitHub\Templater\TemplateParser::set_variable("upload_form", "Test");
+				}
 			}
 		}else{
 			//Formular anzeigen
