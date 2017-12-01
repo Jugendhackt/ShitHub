@@ -1,5 +1,5 @@
 <?php
-
+ini_set('display_errors', 1);
 namespace ShitHub\SQL;
 
 class ShitHubSQL{
@@ -10,14 +10,13 @@ class ShitHubSQL{
 		try{
 			$this->pdo = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.', '.DB_UNAME.', '.DB_PW);
 		}catch(PDOException $e){
-			if(ERROR_LEVEL == "DEBUG"){
-				print("PDO Error:"+$e->getMessage());
-			}else{
-				//Write to log
-			}
+			\ShitHub\Core\Loader::getLogger()->alert('PDOException: '.$e->getMessage());
 		}
 	}
 	public function save_snippet(){
-		
+		if($this->pdo != null){
+			$query = $this->pdo->prepare("");
+		}
+		//TODO: return int as result
 	}
 }
