@@ -17,7 +17,8 @@
         "psr-4": {
             "ShitHub\\Core\\": "ShitHub/Core",
             "ShitHub\\Templater\\": "ShitHub/Templater",
-            "ShitHub\\Modules\\": "ShitHub/Modules"
+            "ShitHub\\Modules\\": "ShitHub/Modules",
+            "ShitHub\\SQL\\": "ShitHub/SQL"
         }
     }
 }
