@@ -26,11 +26,26 @@ class upload{
 					$parser = new \ShitHub\Templater\TemplateParser("templates/upload_form.php");
 					\ShitHub\Templater\TemplateParser::set_variable("upload_form", $parser->parseReturn());
 				}else{
-					//TODO: Add to database, generate id and move file
-					$dbcon = new \ShitHub\SQL\ShitHubSQL();
+					try{
+						$dbcon = new \ShitHub\SQL\ShitHubSQL();
+						$lastid = $dbcon->save_snippet($_POST['upload_title'], $_POST['upload_description'], $_POST['upload_language'], $_POST['upload_tags']);
+						move_uploaded_file($_FILES["upload_file"]["tmp_name"], UPLOAD_DIR.'/'.$lastid.'.snippet');
 
-					\ShitHub\Templater\TemplateParser::set_variable("upload_error", "");
-					\ShitHub\Templater\TemplateParser::set_variable("upload_form", "Test");
+						if(file_exists(UPLOAD_DIR.'/'.$lastid.'.snippet') && filesize(UPLOAD_DIR.'/'.$lastid.'.snippet') != 0){
+							//Upload successful
+							\ShitHub\Templater\TemplateParser::set_variable("upload_error", "");
+							\ShitHub\Templater\TemplateParser::set_variable("upload_form", "Upload successful");
+						}else{
+							//Upload failed
+							\ShitHub\Templater\TemplateParser::set_variable("upload_error", "Upload failed");
+							\ShitHub\Templater\TemplateParser::set_variable("upload_form", file_get_contents("templates/upload_form.php"));
+						}
+					}catch(\Exception $e){
+						\ShitHub\Templater\TemplateParser::set_variable("upload_error", "Unkown error occured.");
+						\ShitHub\Templater\TemplateParser::set_variable("upload_form", file_get_contents("templates/upload_form.php"));
+
+						\ShitHub\Core\Loader::getLogger()->alert('Unkown Exception while upload: '.$e->getMessage());
+					}
 				}
 			}
 		}else{
