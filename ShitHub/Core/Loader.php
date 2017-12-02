@@ -26,7 +26,6 @@ class Loader{
 			Loader::$logger->pushHandler(new \Monolog\Handler\StreamHandler(__DIR__.'/../../log', \Monolog\Logger::EMERGENCY));
 		}
 
-		//\ShitHub\Core\Loader::getLogger()->debug('Log started.');
 		$constructor = new \ShitHub\Core\SiteConstructor();
 
 		$constructor->construct();
