@@ -12,10 +12,12 @@ class ShitHubSQL{
 			\ShitHub\Core\Loader::getLogger()->alert('PDOException: '.$e->getMessage());
 		}
 	}
-	public function save_snippet(){
+	public function save_snippet($title, $description, $language, $tags){
 		if($this->pdo != null){
-			$query = $this->pdo->prepare("");
+			$query = $this->pdo->prepare("INSERT INTO snippets (title, description, language, tags) VALUES (?, ?, ?, ?);");
+			$query->execute(array($title, $description, $language, $tags));
+
+			return $this->pdo->lastInsertId();
 		}
-		//TODO: return int as result
 	}
 }
