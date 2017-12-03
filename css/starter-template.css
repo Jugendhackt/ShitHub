@@ -14,3 +14,7 @@ main {
    width: auto;
    text-align: center;
 }
+.codecol{
+	width: 80%;
+	overflow-x: visible;
+}
