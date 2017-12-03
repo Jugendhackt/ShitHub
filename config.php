@@ -3,8 +3,8 @@
 
 define("ERROR_LEVEL", "DEBUG");
 
-define("SITE_LIST", array("header", "footer", "dashboard", "upload"));
-define("SITE_NAMES", array("header"=>"", "footer"=>"", "dashboard"=>"Dashboard", "upload"=>"Upload"));
+define("SITE_LIST", array("header", "footer", "dashboard", "upload", "dreview", "404", "login"));
+define("SITE_NAMES", array("header"=>"", "footer"=>"", "dashboard"=>"Dashboard", "upload"=>"Upload", "dreview"=>"Review", "404"=>"404-Error", "login"=>"Login"));
 
 define("UPLOAD_DIR", "data/snippets");
 
