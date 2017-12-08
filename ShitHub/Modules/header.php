@@ -5,9 +5,10 @@ namespace ShitHub\Modules;
 class header{
 	public function call_modul(...$args){
 		$site = $args[0];
+		$sm = new \ShitHub\Core\SiteManager();
 
-		if(isset(SITE_NAMES[$site])){
-			\ShitHub\Templater\TemplateParser::set_variable("title", SITE_NAMES[$site]);
+		if($sm->get_title($site) != null){
+			\ShitHub\Templater\TemplateParser::set_variable("title", $sm->get_title($site));
 		}else{
 			\ShitHub\Templater\TemplateParser::set_variable("title", "");
 		}
