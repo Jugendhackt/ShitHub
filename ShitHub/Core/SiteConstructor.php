@@ -4,9 +4,11 @@ namespace ShitHub\Core;
 
 class SiteConstructor{
 	private $site;
+	private $sm;
 
 	function __construct(){
-		
+		$this->sm = new \ShitHub\Core\SiteManager();
+
 		if(isset($_GET['site'])){
 			$this->site = $_GET['site'];
 		}else{
@@ -15,7 +17,7 @@ class SiteConstructor{
 	}
 
 	public function construct(){
-		if(!in_array($this->site, SITE_LIST)){
+		if(!$this->sm->site_allowed($this->site)){
 			$this->site = '404';
 		}
 
@@ -25,14 +27,14 @@ class SiteConstructor{
 	}
 
 	private function load($what){
-		if(in_array($what, SITE_LIST) && file_exists(__DIR__.'/../../templates/'.$what.'.php')){
+		if($this->sm->site_allowed($this->site) && file_exists(__DIR__.'/../../templates/'.$what.'.php')){
 			if(class_exists('\\ShitHub\\Modules\\'.$what)){
 
 				$cname = "ShitHub\\Modules\\".$what;
 				$modul = new $cname;
 
 				if(method_exists($modul, 'call_modul')){
-					$modul->call_modul($this->site, SITE_LIST);
+					$modul->call_modul($this->site);
 				}
 			}
 
