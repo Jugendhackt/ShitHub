@@ -8,21 +8,21 @@ class Loader{
 	public function load(){
 		Loader::$logger = new \Monolog\Logger('mainlog');
 
-		if(ERROR_LEVEL == "DEBUG"){
+		if($_ENV['ERROR_LEVEL'] == "DEBUG"){
 			Loader::$logger->pushHandler(new \Monolog\Handler\StreamHandler(__DIR__.'/../../log', \Monolog\Logger::DEBUG));
-		}else if(ERROR_LEVEL == "INFO"){
+		}else if($_ENV['ERROR_LEVEL'] == "INFO"){
 			Loader::$logger->pushHandler(new \Monolog\Handler\StreamHandler(__DIR__.'/../../log', \Monolog\Logger::INFO));
-		}else if(ERROR_LEVEL == "NOTICE"){
+		}else if($_ENV['ERROR_LEVEL'] == "NOTICE"){
 			Loader::$logger->pushHandler(new \Monolog\Handler\StreamHandler(__DIR__.'/../../log', \Monolog\Logger::NOTICE));
-		}else if(ERROR_LEVEL == "WARNING"){
+		}else if($_ENV['ERROR_LEVEL'] == "WARNING"){
 			Loader::$logger->pushHandler(new \Monolog\Handler\StreamHandler(__DIR__.'/../../log', \Monolog\Logger::WARNING));
-		}else if(ERROR_LEVEL == "ERROR"){
+		}else if($_ENV['ERROR_LEVEL'] == "ERROR"){
 			Loader::$logger->pushHandler(new \Monolog\Handler\StreamHandler(__DIR__.'/../../log', \Monolog\Logger::ERROR));
-		}else if(ERROR_LEVEL == "CRITICAL"){
+		}else if($_ENV['ERROR_LEVEL'] == "CRITICAL"){
 			Loader::$logger->pushHandler(new \Monolog\Handler\StreamHandler(__DIR__.'/../../log', \Monolog\Logger::CRITICAL));
-		}else if(ERROR_LEVEL == "ALERT"){
+		}else if($_ENV['ERROR_LEVEL'] == "ALERT"){
 			Loader::$logger->pushHandler(new \Monolog\Handler\StreamHandler(__DIR__.'/../../log', \Monolog\Logger::ALERT));
-		}else if(ERROR_LEVEL == "EMERGENCY"){
+		}else if($_ENV['ERROR_LEVEL'] == "EMERGENCY"){
 			Loader::$logger->pushHandler(new \Monolog\Handler\StreamHandler(__DIR__.'/../../log', \Monolog\Logger::EMERGENCY));
 		}
 
