@@ -18,3 +18,12 @@ main {
 	width: 80%;
 	overflow-x: visible;
 }
+.right-tabs .nav{
+	float: right;
+}
+.right-tabs .tab-content {
+    float: left;
+    border-top: 1px solid #ddd;
+    margin-top: -1px;
+    width: 100%;
+}
