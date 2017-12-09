@@ -3,12 +3,14 @@
 
 define("ERROR_LEVEL", "DEBUG");
 
-define("SITE_LIST", array("header", "footer", "dashboard", "upload", "dreview", "404", "login"));
-define("SITE_NAMES", array("header"=>"", "footer"=>"", "dashboard"=>"Dashboard", "upload"=>"Upload", "dreview"=>"Review", "404"=>"404-Error", "login"=>"Login"));
+$config = json_encode(file_get_contents("secret/configuration.cfg"), TRUE);
 
-define("UPLOAD_DIR", "data/snippets");
+define("SITE_LIST", $config['site_list']);
+define("SITE_NAMES", $config['site_names']);
 
-define("DB_HOST", "127.0.0.1");
-define("DB_NAME", "shithub");
-define("DB_UNAME", "shithub");
-define("DB_PW", "test");
+define("UPLOAD_DIR", $config['upload_dir']);
+
+define("DB_HOST", $config['db_host']);
+define("DB_NAME", $config['db_name']);
+define("DB_UNAME", $config['db_uname']);
+define("DB_PW", $config['db_pw']);
