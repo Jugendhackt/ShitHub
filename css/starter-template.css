@@ -8,7 +8,6 @@ main {
 .navbar img {
     height: 1.5em;
     margin-right: 0.5em;
-
 }
 .alert {
    width: auto;
@@ -26,4 +25,7 @@ main {
     border-top: 1px solid #ddd;
     margin-top: -1px;
     width: 100%;
+}
+.container{
+	max-width: 100% !important;
 }
