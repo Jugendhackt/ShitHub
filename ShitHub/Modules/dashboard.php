@@ -2,8 +2,8 @@
 
 namespace ShitHub\Modules;
 
-class header{
+class dashboard{
 	public function call_modul(...$args){
-		
+
 	}
 }
