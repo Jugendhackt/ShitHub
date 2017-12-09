@@ -9,7 +9,7 @@
           </li>
         </ul>
     <div class="tab-content">
-        Test
+        {dashboard_tab_content}
     </div>
     </div>
 </main><!-- /.container -->
