@@ -8,8 +8,8 @@
             <a class="nav-link" href="?tab=discussed">Umstrittene</a>
           </li>
         </ul>
-    <div class="tab-content">
-        {dashboard_tab_content}
-    </div>
+        <div class="tab-content">
+            {dashboard_tab_content}
+        </div>
     </div>
 </main><!-- /.container -->
