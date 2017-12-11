@@ -17,16 +17,7 @@ class SiteManager{
 		}
 	}
 	public function get_title($site){
-		$sitetitles = $_ENV['SITE_NAMES'];
-
-		$sitetitles = explode(",", $sitetitles); //Get array from string
-
-		foreach($sitetitles as $key){
-			$temp = explode(" => ", $key);
-
-			if($temp[0] == $site){
-				return $temp[1];
-			}
-		}
+		$sitetitle = $_ENV['SITE_NAME_'.$site];
+		return $sitetitle;
 	}
 }
