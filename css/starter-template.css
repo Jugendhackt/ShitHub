@@ -29,3 +29,38 @@ main {
 .container{
 	max-width: 100% !important;
 }
+.snippet_overview{
+  min-height: 70px;
+  padding: 4px;
+  border-bottom: 1px solid #ddd; 
+  padding-bottom: 6px;
+  background-color: #FAFAFA;
+}
+.snippet_overview .title{
+  font-size: 26px;
+  width: 80%;
+  display: inline-block;
+}
+.snippet_overview .author{
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+}
+.snippet_overview .date{
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  
+}
+.snippet_overview .btn{
+  margin-right: 0px;
+}
+
+.snippet_overview .tags{
+  display: inline-block;
+
+}
+.snippet_overview .tags .btn{
+  margin-right: 5px;
+  margin-bottom: 0;
+}
