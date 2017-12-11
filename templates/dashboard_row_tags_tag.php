@@ -1,0 +1,1 @@
+<p class="btn btn-outline-primary">{dashboard_row_tags_tag}</p>
