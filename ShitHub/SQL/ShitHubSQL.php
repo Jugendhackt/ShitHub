@@ -33,9 +33,9 @@ class ShitHubSQL{
 		}//TODO: Handle if pdo is null
 	}
 
-	public function get_unresponded_reviews(int $anz){
+	public function get_discussed_reviews(int $anz){
 		if($this->pdo != null){
-			$query = $this->pdo->prepare("SELECT author_id, author_name, title, language, tags FROM snippets LIMIT :limit"); //TODO: implement state 
+			$query = $this->pdo->prepare("SELECT id, author_id, author_name, title, language, tags, date, status FROM snippets WHERE status = 1 ORDER BY id DESC LIMIT :limit"); //TODO: implement state 
 			$query->bindParam(':limit', $anz, \PDO::PARAM_INT);
 			$query->execute();
 
@@ -43,19 +43,20 @@ class ShitHubSQL{
 			while($row = $query->fetch()){
 				array_push($array, $row);
 			}
+			
 			return $array;
 		}//TODO: Handle if pdo is null
 	}
 
-	public function get_last_Review(int $anz){
+	public function get_newest_reviews(int $anz){
 		if($this->pdo != null){
-			$query = $this->pdo->prepare("SELECT  author_id, author_name, title, language, tags FROM snippets LIMIT :limit"); //TODO: implement state 
+			$query = $this->pdo->prepare("SELECT  id, author_id, author_name, title, language, tags, date FROM snippets ORDER BY id DESC LIMIT :limit");
 			$query->bindParam(':limit', $anz, \PDO::PARAM_INT);
 			$query->execute();
 
 			$array = array();
 			while($row = $query->fetch()){
-				array_push($row, $array);
+				array_push($array, $row);
 			}
 
 			return $array;
