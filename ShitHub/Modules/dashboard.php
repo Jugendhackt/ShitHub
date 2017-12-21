@@ -36,6 +36,7 @@ class dashboard{
 				$tags .= $tagparser->parseReturn();
 			}
 
+			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_id", $key['id']);
 			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_title", $key['title']);
 			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_author_name", $key['author_name']);
 			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_author_id", $key['author_id']);
