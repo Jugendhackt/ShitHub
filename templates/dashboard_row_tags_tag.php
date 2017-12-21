@@ -1,1 +1,1 @@
-<p class="btn btn-outline-primary">{dashboard_row_tags_tag}</p>
+<a href="?site=tag&tag={dashboard_row_tags_tag}"><p class="btn btn-outline-primary">{dashboard_row_tags_tag}</p></a>

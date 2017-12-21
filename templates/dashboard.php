@@ -2,10 +2,10 @@
     <div class="right-tabs clearfix">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" href="?tab=newest">Neuste</a>
+            <a class="nav-link {newest_active}" href="?tab=newest">Neuste</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="?tab=discussed">Umstrittene</a>
+            <a class="nav-link {discussed_active}" href="?tab=discussed">Umstrittene</a>
           </li>
         </ul>
         <div class="tab-content">
