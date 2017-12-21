@@ -33,6 +33,8 @@ main {
   min-height: 70px;
   padding: 4px;
   border-bottom: 1px solid #ddd; 
+  border-left: 1px solid #ddd; 
+  border-right: 1px solid #ddd; 
   padding-bottom: 6px;
   background-color: #FAFAFA;
 }
