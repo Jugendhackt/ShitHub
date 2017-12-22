@@ -27,15 +27,16 @@ class upload{
 					\ShitHub\Templater\TemplateParser::set_variable("upload_form", $parser->parseReturn());
 				}else{
 					try{
-						$dbcon = new \ShitHub\SQL\ShitHubSQL();
-						$lastid = $dbcon->save_snippet($_POST['upload_title'], $_POST['upload_description'], $_POST['upload_language'], $_POST['upload_tags']);
-
 						move_uploaded_file($_FILES["upload_file"]["tmp_name"], UPLOAD_DIR.'/'.$lastid.'.snippet');
 						$temp = file_get_contents( UPLOAD_DIR.'/'.$lastid.'.snippet');
 						file_put_contents( UPLOAD_DIR.'/'.$lastid.'.snippet', htmlentities($temp));
 
 						if(file_exists(UPLOAD_DIR.'/'.$lastid.'.snippet') && filesize(UPLOAD_DIR.'/'.$lastid.'.snippet') != 0){
 							//Upload successful
+
+							$dbcon = new \ShitHub\SQL\ShitHubSQL();
+							$lastid = $dbcon->save_snippet($_POST['upload_title'], $_POST['upload_description'], $_POST['upload_language'], $_POST['upload_tags']);
+
 							\ShitHub\Templater\TemplateParser::set_variable("upload_error", "");
 							\ShitHub\Templater\TemplateParser::set_variable("upload_form", "Upload successful");
 						}else{
