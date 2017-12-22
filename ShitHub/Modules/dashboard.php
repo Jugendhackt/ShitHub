@@ -31,9 +31,11 @@ class dashboard{
 			$temp = explode(", ", $key['tags']);
 			$tagparser = new \ShitHub\Templater\TemplateParser("templates/dashboard_row_tags_tag.php");
 
-			foreach($temp as $tag){
-				\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_tags_tag", $tag);
-				$tags .= $tagparser->parseReturn();
+			foreach($temp as $tag){ 
+				if(!empty($tag)){
+					\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_tags_tag", $tag);
+					$tags .= $tagparser->parseReturn();
+				}
 			}
 
 			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_id", $key['id']);
