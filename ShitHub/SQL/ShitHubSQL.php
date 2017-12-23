@@ -7,7 +7,7 @@ class ShitHubSQL{
 
 	public function __construct(){
 		try{
-			$this->pdo = new \PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME,DB_UNAME,DB_PW);
+			$this->pdo = new \PDO('mysql:host='.$_ENV['DB_HOST'].';dbname='.$_ENV['DB_NAME'],$_ENV['DB_UNAME'],$_ENV['DB_PW']);
 		}catch(\PDOException $e){
 			\ShitHub\Core\Loader::getLogger()->alert('PDOException: '.$e->getMessage());
 		}
