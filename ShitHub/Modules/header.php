@@ -18,7 +18,7 @@ class header{
 		if(isset($_SESSION['login_userid'])){
 			\ShitHub\Templater\TemplateParser::set_variable("loginor", file_get_contents("templates/profil_menu.php"));
 		}else{
-			\ShitHub\Templater\TemplateParser::set_variable("loginor", file_get_contents("templates/login_menu.php"));
+			\ShitHub\Templater\TemplateParser::set_variable("loginor", file_get_contents("templates/login/login_menu.php"));
 		}
 
 		\ShitHub\Templater\TemplateParser::set_variable("upload_error", "");

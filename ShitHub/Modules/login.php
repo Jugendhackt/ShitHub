@@ -44,6 +44,6 @@ class login{
 	}	
 
 	private function load_form(){
-		\ShitHub\Templater\TemplateParser::set_variable("loginform", file_get_contents("templates/login_form.php"));
+		\ShitHub\Templater\TemplateParser::set_variable("loginform", file_get_contents("templates/login/login_form.php"));
 	}
 }
