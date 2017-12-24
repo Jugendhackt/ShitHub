@@ -29,7 +29,8 @@ class upload{
 				}else{
 					try{
 						$dbcon = new \ShitHub\SQL\ShitHubSQL();
-						$lastid = $dbcon->save_snippet($_POST['upload_title'], $_POST['upload_description'], $_POST['upload_language'], $_POST['upload_tags']);
+						$uname = $dbcon->get_user($_SESSION['login_userid'])['uname'];
+						$lastid = $dbcon->save_snippet($_POST['upload_title'], $_POST['upload_description'], $_POST['upload_language'], $_POST['upload_tags'], $_SESSION['login_userid'], $uname);
 
 						move_uploaded_file($_FILES["upload_file"]["tmp_name"], $_ENV['UPLOAD_DIR'].'/'.$lastid.'.snippet');
 						$temp = file_get_contents( $_ENV['UPLOAD_DIR'].'/'.$lastid.'.snippet');
