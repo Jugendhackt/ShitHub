@@ -27,19 +27,32 @@ class SiteConstructor{
 	}
 
 	private function load($what){
-		if($this->sm->site_allowed($this->site) && file_exists(__DIR__.'/../../templates/'.$what.'.php')){
-			if(class_exists('\\ShitHub\\Modules\\'.$what)){
+		if($this->sm->site_allowed($this->site)){
+			if(file_exists(__DIR__.'/../../templates/'.$what.'.php')){
+				if(class_exists('\\ShitHub\\Modules\\'.$what)){
 
-				$cname = "ShitHub\\Modules\\".$what;
-				$modul = new $cname;
+					$cname = "ShitHub\\Modules\\".$what;
+					$modul = new $cname;
 
-				if(method_exists($modul, 'call_modul')){
-					$modul->call_modul($this->site);
+					if(method_exists($modul, 'call_modul')){
+						$modul->call_modul($this->site);
+					}
 				}
+
+				$this->printpart(__DIR__.'/../../templates/'.$what.'.php');
+			}elseif(file_exists(__DIR__.'/../../templates/'.$what.'/'.$what.'.php')){
+				if(class_exists('\\ShitHub\\Modules\\'.$what)){
+
+					$cname = "ShitHub\\Modules\\".$what;
+					$modul = new $cname;
+
+					if(method_exists($modul, 'call_modul')){
+						$modul->call_modul($this->site);
+					}
+				}
+
+				$this->printpart(__DIR__.'/../../templates/'.$what.'/'.$what.'.php');
 			}
-
-			$this->printpart(__DIR__.'/../../templates/'.$what.'.php');
-
 		}
 	}
 
