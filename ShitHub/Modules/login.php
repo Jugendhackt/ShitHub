@@ -27,14 +27,14 @@ class login{
 						header("Location: index.php?login=true");
 					}
 				}else{
-					\ShitHub\Templater\TemplateParser::set_variable("login_errormsg", "Wrong username or password.");
-					$parser = new \ShitHub\Templater\TemplateParser("templates/login_error.php");
+					\ShitHub\Templater\TemplateParser::set_variable("errormsg", "<strong>Login failed!</strong> Wrong username or password.");
+					$parser = new \ShitHub\Templater\TemplateParser("templates/error.php");
 					\ShitHub\Templater\TemplateParser::set_variable("loginerror", $parser->parseReturn());
 					$this->load_form();
 				}
 			}else{
-				\ShitHub\Templater\TemplateParser::set_variable("login_errormsg", "Please fill in all fields.");
-				$parser = new \ShitHub\Templater\TemplateParser("templates/login_error.php");
+				\ShitHub\Templater\TemplateParser::set_variable("errormsg", "<strong>Login failed!</strong> Please fill in all fields.");
+				$parser = new \ShitHub\Templater\TemplateParser("templates/error.php");
 				\ShitHub\Templater\TemplateParser::set_variable("loginerror", $parser->parseReturn());
 				$this->load_form();
 			}
