@@ -1,2 +1,3 @@
+{logininfo}
 {loginerror}
 {loginform}

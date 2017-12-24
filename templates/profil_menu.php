@@ -3,6 +3,6 @@
              Profil
         </a>
     <div class="dropdown-menu" aria-labelledby="dropdown-review">
-        <a class="dropdown-item" href="#">Logout</a>
+        <a class="dropdown-item" href="?site=logout">Logout</a>
     </div>
 </li>
