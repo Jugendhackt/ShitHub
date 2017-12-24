@@ -12,10 +12,10 @@ class ShitHubSQL{
 			\ShitHub\Core\Loader::getLogger()->alert('PDOException: '.$e->getMessage());
 		}
 	}
-	public function save_snippet($title, $description, $language, $tags){
+	public function save_snippet($title, $description, $language, $tags, $author_id, $author_name){
 		if($this->pdo != null){
-			$query = $this->pdo->prepare("INSERT INTO snippets (title, description, language, tags) VALUES (?, ?, ?, ?);");
-			if($query->execute(array($title, $description, $language, $tags))){
+			$query = $this->pdo->prepare("INSERT INTO snippets (title, description, language, tags, author_id, author_name, date) VALUES (?, ?, ?, ?, ?, ?, ?);");
+			if($query->execute(array($title, $description, $language, $tags, $author_id, $author_name, date('Y-m-d')))){
 				return $this->pdo->lastInsertId();
 			}else{
 				\ShitHub\Core\Loader::getLogger()->alert('SQL Error: '.$query->queryString.': '.$query->errorInfo()[2]);
@@ -48,7 +48,17 @@ class ShitHubSQL{
 			die("Database seems to be offline. Please try again later.");
 		}
 	}
-
+	public function get_user($id){
+		if($this->pdo != null){
+			$query = $this->pdo->prepare("SELECT uname, pwhash, email, lastlogin FROM users WHERE id = ?");
+			$query->execute(array($id));
+			$row = $query->fetch();
+			
+			return $row;
+		}else{
+			die("Database seems to be offline. Please try again later.");
+		}
+	}
 	public function get_discussed_reviews(int $anz){
 		if($this->pdo != null){
 			$query = $this->pdo->prepare("SELECT id, author_id, author_name, title, language, tags, date, status FROM snippets WHERE status = 1 ORDER BY id DESC LIMIT :limit"); //TODO: implement state 
