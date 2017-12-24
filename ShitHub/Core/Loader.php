@@ -29,6 +29,9 @@ class Loader{
 			Loader::$logger->pushHandler(new \Monolog\Handler\StreamHandler(__DIR__.'/../../log', \Monolog\Logger::EMERGENCY));
 		}
 
+		\Monolog\ErrorHandler::register(Loader::$logger);
+		error_reporting(0);
+
 		$constructor = new \ShitHub\Core\SiteConstructor();
 
 		$constructor->construct();
