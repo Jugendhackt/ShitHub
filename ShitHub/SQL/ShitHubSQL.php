@@ -24,7 +24,19 @@ class ShitHubSQL{
 			die("Database seems to be offline. Please try again later.");
 		}
 	}
-
+	public function delete_snippet($id){
+		if($this->pdo != null){
+			$query = $this->pdo->prepare("DELETE FROM snippets WHERE id = ?");
+			if($query->execute(array($id))){
+				return true;
+			}else{
+				\ShitHub\Core\Loader::getLogger()->alert('SQL Error: '.$query->queryString.': '.$query->errorInfo()[2]);
+				return false;
+			}
+		}else{
+			die("Database seems to be offline. Please try again later.");
+		}
+	}
 	public function load_snippet($id){
 		if($this->pdo != null){
 			$query = $this->pdo->prepare("SELECT title, description, language, tags FROM snippets WHERE id = ?");
