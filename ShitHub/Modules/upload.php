@@ -16,7 +16,7 @@ class upload{
 				\ShitHub\Templater\TemplateParser::set_variable("errormsg", "<strong>Upload failed!</strong> Bitte alle Felder ausfüllen!");
 				$parser = new \ShitHub\Templater\TemplateParser("templates/error.php");
 				\ShitHub\Templater\TemplateParser::set_variable("upload_error", $parser->parseReturn()); //TODO: export fileload with template parsing
-				$parser = new \ShitHub\Templater\TemplateParser("templates/upload_form.php");
+				$parser = new \ShitHub\Templater\TemplateParser("templates/upload/upload_form.php");
 				\ShitHub\Templater\TemplateParser::set_variable("upload_form", $parser->parseReturn());
 
 			}else{
@@ -24,7 +24,7 @@ class upload{
 					\ShitHub\Templater\TemplateParser::set_variable("errormsg", "<strong>Upload failed!</strong> Ungültiges Format!");
 					$parser = new \ShitHub\Templater\TemplateParser("templates/error.php");
 					\ShitHub\Templater\TemplateParser::set_variable("upload_error", $parser->parseReturn());
-					$parser = new \ShitHub\Templater\TemplateParser("templates/upload_form.php");
+					$parser = new \ShitHub\Templater\TemplateParser("templates/upload/upload_form.php");
 					\ShitHub\Templater\TemplateParser::set_variable("upload_form", $parser->parseReturn());
 				}else{
 					try{
@@ -59,7 +59,7 @@ class upload{
 			}
 		}else{
 			//Formular anzeigen
-			$parser = new \ShitHub\Templater\TemplateParser("templates/upload_form.php");
+			$parser = new \ShitHub\Templater\TemplateParser("templates/upload/upload_form.php");
 			\ShitHub\Templater\TemplateParser::set_variable("upload_form", $parser->parseReturn());
 			\ShitHub\Templater\TemplateParser::set_variable("upload_error", "");
 		}

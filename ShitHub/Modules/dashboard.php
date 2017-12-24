@@ -11,7 +11,7 @@ class dashboard{
 		}
 
 		$sql = new \ShitHub\SQL\ShitHubSQL();
-		$parser = new \ShitHub\Templater\TemplateParser("templates/dashboard_row.php");
+		$parser = new \ShitHub\Templater\TemplateParser("templates/dashboard/dashboard_row.php");
 
 		\ShitHub\Templater\TemplateParser::set_variable("newest_active", "");
 		\ShitHub\Templater\TemplateParser::set_variable("discussed_active", "");
@@ -31,7 +31,7 @@ class dashboard{
 		foreach($result as $key){
 			$tags = "";
 			$temp = explode(", ", $key['tags']);
-			$tagparser = new \ShitHub\Templater\TemplateParser("templates/dashboard_row_tags_tag.php");
+			$tagparser = new \ShitHub\Templater\TemplateParser("templates/dashboard/dashboard_row_tags_tag.php");
 
 			foreach($temp as $tag){ 
 				if(!empty($tag)){
