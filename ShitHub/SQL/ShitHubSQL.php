@@ -20,7 +20,9 @@ class ShitHubSQL{
 			}else{
 				\ShitHub\Core\Loader::getLogger()->alert('SQL Error: '.$query->queryString.': '.$query->errorInfo()[2]);
 			}
-		}//TODO: Handle if pdo is null
+		}else{
+			die("Database seems to be offline. Please try again later.");
+		}
 	}
 
 	public function load_snippet($id){
@@ -30,7 +32,9 @@ class ShitHubSQL{
 			$row = $query->fetch();
 			
 			return $row;
-		}//TODO: Handle if pdo is null
+		}else{
+			die("Database seems to be offline. Please try again later.");
+		}
 	}
 
 	public function get_discussed_reviews(int $anz){
@@ -45,7 +49,9 @@ class ShitHubSQL{
 			}
 			
 			return $array;
-		}//TODO: Handle if pdo is null
+		}else{
+			die("Database seems to be offline. Please try again later.");
+		}
 	}
 
 	public function get_newest_reviews(int $anz){
@@ -60,7 +66,9 @@ class ShitHubSQL{
 			}
 
 			return $array;
-		}//TODO: Handle if pdo is null
+		}else{
+			die("Database seems to be offline. Please try again later.");
+		}
 	}
 	public function check_login($uname, $pword){
 		if($this->pdo != null){
@@ -82,6 +90,8 @@ class ShitHubSQL{
 			}else{
 				\ShitHub\Core\Loader::getLogger()->alert('SQL Error: '.$query->queryString.': '.$query->errorInfo()[2]);
 			}
-		}//TODO: Handle if pdo is null
+		}else{
+			die("Database seems to be offline. Please try again later.");
+		}	
 	}
 }

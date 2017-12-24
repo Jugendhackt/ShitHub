@@ -24,7 +24,9 @@ class dashboard{
 			$result = $sql->get_newest_reviews(5);
 		}
 		
-		
+		if($result == null){
+			$full = "";
+		}else{
 		$full = "";		
 		foreach($result as $key){
 			$tags = "";
@@ -46,7 +48,7 @@ class dashboard{
 			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_tags", $tags);
 			$full .= $parser->parseReturn();
 		}
-
+		}
 		\ShitHub\Templater\TemplateParser::set_variable("dashboard_tab_content", $full);
 	}
 }
