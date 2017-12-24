@@ -8,8 +8,8 @@ class login{
 		\ShitHub\Templater\TemplateParser::set_variable("logininfo", "");
 
 		if(isset($_GET['returnurl'])){ //If we came from another site, show "Please login to proceed" box
-			\ShitHub\Templater\TemplateParser::set_variable("login_infomsg", "Please login to proceed.");
-			$parser = new \ShitHub\Templater\TemplateParser("templates/login_info.php");
+			\ShitHub\Templater\TemplateParser::set_variable("infomsg", "<strong>Information: </strong>Please login to proceed.");
+			$parser = new \ShitHub\Templater\TemplateParser("templates/info.php");
 			\ShitHub\Templater\TemplateParser::set_variable("logininfo", $parser->parseReturn());
 		}
 
