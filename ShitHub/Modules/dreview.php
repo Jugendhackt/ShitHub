@@ -1,6 +1,10 @@
 <?php
 namespace ShitHub\Modules;
 
+if(!defined(SECURITY)){
+	die("Direct invocation isn't allowed.");
+}
+
 class dreview{
 	private $id;
 	private $code;

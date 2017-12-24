@@ -1,6 +1,9 @@
 <?php
-
 namespace ShitHub\Core;
+
+if(!defined(SECURITY)){
+	die("Direct invocation isn't allowed.");
+}
 
 class Loader{
 	private static $logger;

@@ -2,6 +2,10 @@
 
 namespace ShitHub\Modules;
 
+if(!defined(SECURITY)){
+	die("Direct invocation isn't allowed.");
+}
+
 class upload{
 	public function call_modul(...$args){
 		if(!isset($_SESSION['login_userid'])){

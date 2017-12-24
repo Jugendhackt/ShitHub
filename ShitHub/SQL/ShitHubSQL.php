@@ -1,6 +1,10 @@
 <?php
 namespace ShitHub\SQL;
 
+if(!defined(SECURITY)){
+	die("Direct invocation isn't allowed.");
+}
+
 class ShitHubSQL{
 
 	private $pdo = null; //pdo object

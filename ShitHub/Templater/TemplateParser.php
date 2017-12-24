@@ -2,6 +2,10 @@
 
 namespace ShitHub\Templater;
 
+if(!defined(SECURITY)){
+    die("Direct invocation isn't allowed.");
+}
+
 class TemplateParser{
 	private $filename;
 	private $html;

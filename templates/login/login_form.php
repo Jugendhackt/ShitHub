@@ -1,3 +1,6 @@
+<?php
+die("Direct invocation isn't allowed.");
+?>
 <main role="main" class="container-flex">
         <form action="#" align="center" method="post">
             <div class="container">

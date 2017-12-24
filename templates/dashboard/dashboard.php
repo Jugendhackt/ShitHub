@@ -1,3 +1,6 @@
+<?php
+die("Direct invocation isn't allowed.");
+?>
 <main role="main" class="container">
     <div class="right-tabs clearfix">
         <ul class="nav nav-tabs">

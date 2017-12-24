@@ -2,6 +2,10 @@
 
 namespace ShitHub\Modules;
 
+if(!defined(SECURITY)){
+	die("Direct invocation isn't allowed.");
+}
+
 class dashboard{
 	public function call_modul(...$args){
 		if(isset($_GET['tab'])){

@@ -1,5 +1,5 @@
 <?php
-
+define("SECURITY", "TRUE");	
 require_once __DIR__ . '/vendor/autoload.php'; //Start autoloader
 $dotenv = new Dotenv\Dotenv('/var/www/', 'config.env'); //Path for config comes here
 $dotenv->load();
