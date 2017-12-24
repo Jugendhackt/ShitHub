@@ -13,16 +13,16 @@ class upload{
 		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			if(!isset($_POST['upload_title']) || !isset($_FILES['upload_file']) || !isset($_POST['upload_language']) || !isset($_POST['upload_description']) || !isset($_POST['upload_tags'])){
 
-				\ShitHub\Templater\TemplateParser::set_variable("upload_error_code", "Bitte alle Felder ausfüllen!");
-				$parser = new \ShitHub\Templater\TemplateParser("templates/upload_error.php");
+				\ShitHub\Templater\TemplateParser::set_variable("errormsg", "<strong>Upload failed!</strong> Bitte alle Felder ausfüllen!");
+				$parser = new \ShitHub\Templater\TemplateParser("templates/error.php");
 				\ShitHub\Templater\TemplateParser::set_variable("upload_error", $parser->parseReturn()); //TODO: export fileload with template parsing
 				$parser = new \ShitHub\Templater\TemplateParser("templates/upload_form.php");
 				\ShitHub\Templater\TemplateParser::set_variable("upload_form", $parser->parseReturn());
 
 			}else{
 				if(explode("/", $_FILES['upload_file']['type'])[0] != "text"){
-					\ShitHub\Templater\TemplateParser::set_variable("upload_error_code", "Ungültiges Format!");
-					$parser = new \ShitHub\Templater\TemplateParser("templates/upload_error.php");
+					\ShitHub\Templater\TemplateParser::set_variable("errormsg", "<strong>Upload failed!</strong> Ungültiges Format!");
+					$parser = new \ShitHub\Templater\TemplateParser("templates/error.php");
 					\ShitHub\Templater\TemplateParser::set_variable("upload_error", $parser->parseReturn());
 					$parser = new \ShitHub\Templater\TemplateParser("templates/upload_form.php");
 					\ShitHub\Templater\TemplateParser::set_variable("upload_form", $parser->parseReturn());
@@ -42,11 +42,15 @@ class upload{
 						}else{
 							$dbcon->delete_snippet($lastid);
 							//Upload failed
-							\ShitHub\Templater\TemplateParser::set_variable("upload_error", "Upload failed");
+							\ShitHub\Templater\TemplateParser::set_variable("errormsg", "<strong>Upload failed!</strong>");
+							$parser = new \ShitHub\Templater\TemplateParser("templates/error.php");
+							\ShitHub\Templater\TemplateParser::set_variable("upload_error", $parser->parseReturn());
 							\ShitHub\Templater\TemplateParser::set_variable("upload_form", file_get_contents("templates/upload_form.php"));
 						}
 					}catch(\Exception $e){
-						\ShitHub\Templater\TemplateParser::set_variable("upload_error", "Unkown error occured.");
+						\ShitHub\Templater\TemplateParser::set_variable("errormsg", "<strong>Upload failed!</strong> Unkown error");
+						$parser = new \ShitHub\Templater\TemplateParser("templates/error.php");
+						\ShitHub\Templater\TemplateParser::set_variable("upload_error", $parser->parseReturn());
 						\ShitHub\Templater\TemplateParser::set_variable("upload_form", file_get_contents("templates/upload_form.php"));
 
 						\ShitHub\Core\Loader::getLogger()->alert('Unkown Exception while upload: '.$e->getMessage());
