@@ -54,7 +54,7 @@ class ShitHubSQL{
 	}
 	public function get_user($id){
 		if($this->pdo != null){
-			$query = $this->pdo->prepare("SELECT uname, pwhash, email, lastlogin FROM users WHERE id = ?");
+			$query = $this->pdo->prepare("SELECT uname, pwhash, email, lastlogin, pwchange FROM users WHERE id = ?");
 			$query->execute(array($id));
 			$row = $query->fetch();
 			
