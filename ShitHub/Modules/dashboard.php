@@ -48,7 +48,15 @@ class dashboard{
 			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_title", $key['title']);
 			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_author_name", $key['author_name']);
 			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_author_id", $key['author_id']);
-			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_date", $key['date']);
+
+			if($key['date'] != null){
+				$date = \DateTime::createFromFormat('U', $key['date']);
+				$date->setTimezone(new \DateTimeZone("Europe/Berlin"));
+				\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_date", $date->format('d.m.Y G:i'));
+			}else{
+				\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_date", "");
+			}
+
 			\ShitHub\Templater\TemplateParser::set_variable("dashboard_row_tags", $tags);
 			$full .= $parser->parseReturn();
 		}
