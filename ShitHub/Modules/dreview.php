@@ -17,7 +17,19 @@ class dreview{
 		$this->code = $sql->load_snippet($this->id);
 
 		if($this->code != null && file_exists ('data/snippets/'.$this->id.'.snippet')){
-			\ShitHub\Templater\TemplateParser::set_variable("displaycode", file_get_contents('data/snippets/'.$this->id.'.snippet'));
+			$code = file_get_contents('data/snippets/'.$this->id.'.snippet');
+			$codearray = explode("\n", $code);
+			$size = sizeof($codearray);
+			unset($codearray);
+
+			$nums = "";
+			$i = 1;
+			for($i = 0;$i<$size;$i++){
+				$nums .= $i."\n";
+			}
+
+			\ShitHub\Templater\TemplateParser::set_variable("displaycode", $code);
+			\ShitHub\Templater\TemplateParser::set_variable("displaynums", $nums);
 		}else{
 			header('Location: ?site=404');
 		}
