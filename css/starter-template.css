@@ -14,8 +14,26 @@ main {
    text-align: center;
 }
 .codecol{
-	width: 80%;
+	width: 75%;
 	overflow-x: visible;
+  padding-left: 10px;
+}
+.precode{
+  background-color: #eef;
+  border-radius: 10px;
+  border: 1px solid #ddd; 
+}
+.numcol{
+  width: 2em;
+  text-align: right;
+}
+.num_code{
+  border: 1px solid #ddd; 
+  padding: 0px;
+  margin: 0px;
+}
+.prenum{
+  overflow: hidden;
 }
 .right-tabs .nav{
 	float: right;
@@ -65,4 +83,7 @@ main {
 .snippet_overview .tags .btn{
   margin-right: 5px;
   margin-bottom: 0;
+}
+textarea{
+  resize: both;
 }
