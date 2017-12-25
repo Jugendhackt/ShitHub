@@ -87,3 +87,9 @@ main {
 textarea{
   resize: both;
 }
+.inputs{
+  width: 10em;
+}
+.inputs2{
+  width: 12em;
+}
