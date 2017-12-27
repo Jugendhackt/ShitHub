@@ -2,7 +2,7 @@
 
       <div class= "container">
         <div class= "row">
-            <div class= "col-sm" align= "center">
+            <div class= "col-sm mx-auto text-center">
                 <h3> Austehende Reviews </h3>
                 <table class="table table-bordered">
                     <thead>
@@ -26,7 +26,7 @@
     
             </div>
             
-            <div class= "col-sm" align= "center">
+            <div class= "col-sm mx-auto text-center">
                 <h3> Letzte Review </h3>
                 <table class="table table-bordered">
                     <thead>

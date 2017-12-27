@@ -18,3 +18,30 @@ main {
 	width: 80%;
 	overflow-x: visible;
 }
+
+.login_form{
+	font-size: 20px;
+	margin-top: 15px;
+}
+
+.fs-upload_form{
+	font-size: 20px;
+}
+
+.fs-mt-upload_form{
+	font-size: 20px;
+	margin-top: 15px;
+}
+
+.w-upload_form{
+	width: 100%;
+}
+
+.mt-upload_form{
+	margin-top: 15px;
+}
+
+#button-upload_form{
+	margin-top: 15px;
+	margin-left: 5px;
+}

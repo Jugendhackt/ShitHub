@@ -3,17 +3,17 @@
         <div class="container">
             <div class= "row">
                 <div class= "col">
-                    <label style="font-size: 20px;">Titel</label>
-                    <input class= "form-control" name="upload_title" id="title" style="width: 100%"></textarea>
+                    <label class="fs-upload_form">Titel</label>
+                    <input class= "form-control w-upload_form" name="upload_title" id="title"></textarea>
                 </div>
             </div>
             <div class= "row">
                 <div class= "col-2">
                     <div class="form-group">
-                        <label style="font-size: 20px; margin-top: 15px;">Code hochladen</label>
+                        <label class="fs-mt-upload_form">Code hochladen</label>
                         <input name="upload_file" type="file" class="form-control-file" id="upload-file">
                     </div>
-                    <label style="font-size: 20px;margin-top: 15px">Programmiersprachen</label>
+                    <label class="fs-mt-upload_form">Programmiersprachen</label>
                     <select name="upload_language" id="language" class= "form-control">
                         {pl}
                     </select>
@@ -21,12 +21,12 @@
             </div>
             <div class= "row">
                 <div class= "col">
-                    <label style="font-size: 20px;">Beschreibung</label>
-                    <textarea class= "form-control" name="upload_description" id="beschreibung" rows="10" style="width: 100%"></textarea>
+                    <label class="fs-upload_form"">Beschreibung</label>
+                    <textarea class= "form-control w-upload_form" name="upload_description" id="beschreibung" rows="10"></textarea>
                     
-                    <input name="upload_tags" class= "form-control" type= "text" placeholder= "Tags... (mit Komma trennen!)" style= "margin-top: 15px">
-                    <button type= "submit" class= "btn btn-primary" style= "margin-top: 15px">Hochladen</button>
-                    <a href= "index.php"><button type="button" class= "btn btn-secondary" style= "margin-top: 15px; margin-left: 5px">Abbruch</button></a>
+                    <input name="upload_tags" class= "form-control mt-upload_form" type= "text" placeholder= "Tags... (mit Komma trennen!)">
+                    <button type= "submit" class= "btn btn-primary mt-upload_form">Hochladen</button>
+                    <a href= "index.php"><button type="button" class= "btn btn-secondary" id="button-upload_form">Abbruch</button></a>
                 </div>
                 
             </div>
