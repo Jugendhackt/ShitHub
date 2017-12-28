@@ -12,3 +12,8 @@ ShitHub is a collaborative platform, created to check your own and/or foreign co
 # Further informations
 You can obtain further informations on our [Wiki](../../wiki/)
 
+# TODO List
+- Syntax highlighting (find a libary)
+- custom timezone/geoip based timezone
+- Inline comments (Snippet view)
+- REST API

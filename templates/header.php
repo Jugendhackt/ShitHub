@@ -1,3 +1,6 @@
+<?php
+die("Direct invocation isn't allowed.");
+?>
 <!doctype html>
 <html lang="de">
   <head>

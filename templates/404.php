@@ -1,3 +1,6 @@
+<?php
+die("Direct invocation isn't allowed.");
+?>
 <center>
 <h1>
 <img alt="facepalm" src="img/facepalm.jpg"></img>
