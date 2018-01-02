@@ -17,3 +17,4 @@ You can obtain further informations on our [Wiki](../../wiki/)
 - custom timezone/geoip based timezone
 - Inline comments (Snippet view)
 - REST API
+- Automatic vulnerability scanner tools
