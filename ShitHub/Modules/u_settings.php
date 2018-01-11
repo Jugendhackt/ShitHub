@@ -19,13 +19,13 @@ class u_settings{
 		if($user[4] != null){
 			$date = \DateTime::createFromFormat('U', $user[4]);
 			$date->setTimezone(new \DateTimeZone("Europe/Berlin"));
-			\ShitHub\Templater\TemplateParser::set_variable("settings_changedate", $date->format('d.m.Y G:i'));
+			\anghenfil\Templater\TemplateParser::set_variable("settings_changedate", $date->format('d.m.Y G:i'));
 		}else{
-			\ShitHub\Templater\TemplateParser::set_variable("settings_changedate", "Niemals geändert.");
+			\anghenfil\Templater\TemplateParser::set_variable("settings_changedate", "Niemals geändert.");
 		}
 
-		\ShitHub\Templater\TemplateParser::set_variable("settings_uname", $user[0]);
-		\ShitHub\Templater\TemplateParser::set_variable("settings_email", $user[2]);
+		\anghenfil\Templater\TemplateParser::set_variable("settings_uname", $user[0]);
+		\anghenfil\Templater\TemplateParser::set_variable("settings_email", $user[2]);
 		
 	}
 }

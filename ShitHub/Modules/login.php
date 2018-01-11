@@ -8,13 +8,13 @@ if(!defined(SECURITY)){
 
 class login{
 	public function call_modul(...$args){
-		\ShitHub\Templater\TemplateParser::set_variable("loginerror", "");
-		\ShitHub\Templater\TemplateParser::set_variable("logininfo", "");
+		\anghenfil\Templater\TemplateParser::set_variable("loginerror", "");
+		\anghenfil\Templater\TemplateParser::set_variable("logininfo", "");
 
 		if(isset($_GET['returnurl'])){ //If we came from another site, show "Please login to proceed" box
-			\ShitHub\Templater\TemplateParser::set_variable("infomsg", "<strong>Information: </strong>Please login to proceed.");
-			$parser = new \ShitHub\Templater\TemplateParser("templates/info.php");
-			\ShitHub\Templater\TemplateParser::set_variable("logininfo", $parser->parseReturn());
+			\anghenfil\Templater\TemplateParser::set_variable("infomsg", "<strong>Information: </strong>Please login to proceed.");
+			$parser = new \anghenfil\Templater\TemplateParser("templates/info.php");
+			\anghenfil\Templater\TemplateParser::set_variable("logininfo", $parser->parseReturn());
 		}
 
 		if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -31,15 +31,15 @@ class login{
 						header("Location: index.php?login=true");
 					}
 				}else{
-					\ShitHub\Templater\TemplateParser::set_variable("errormsg", "<strong>Login failed!</strong> Wrong username or password.");
-					$parser = new \ShitHub\Templater\TemplateParser("templates/error.php");
-					\ShitHub\Templater\TemplateParser::set_variable("loginerror", $parser->parseReturn());
+					\anghenfil\Templater\TemplateParser::set_variable("errormsg", "<strong>Login failed!</strong> Wrong username or password.");
+					$parser = new \anghenfil\Templater\TemplateParser("templates/error.php");
+					\anghenfil\Templater\TemplateParser::set_variable("loginerror", $parser->parseReturn());
 					$this->load_form();
 				}
 			}else{
-				\ShitHub\Templater\TemplateParser::set_variable("errormsg", "<strong>Login failed!</strong> Please fill in all fields.");
-				$parser = new \ShitHub\Templater\TemplateParser("templates/error.php");
-				\ShitHub\Templater\TemplateParser::set_variable("loginerror", $parser->parseReturn());
+				\anghenfil\Templater\TemplateParser::set_variable("errormsg", "<strong>Login failed!</strong> Please fill in all fields.");
+				$parser = new \anghenfil\Templater\TemplateParser("templates/error.php");
+				\anghenfil\Templater\TemplateParser::set_variable("loginerror", $parser->parseReturn());
 				$this->load_form();
 			}
 		}else{
@@ -48,6 +48,6 @@ class login{
 	}	
 
 	private function load_form(){
-		\ShitHub\Templater\TemplateParser::set_variable("loginform", file_get_contents("templates/login/login_form.php"));
+		\anghenfil\Templater\TemplateParser::set_variable("loginform", file_get_contents("templates/login/login_form.php"));
 	}
 }

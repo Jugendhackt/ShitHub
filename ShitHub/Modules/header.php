@@ -14,18 +14,18 @@ class header{
 		$sm = new \ShitHub\Core\SiteManager();
 
 		if($sm->get_title($site) != null){
-			\ShitHub\Templater\TemplateParser::set_variable("title", $sm->get_title($site));
+			\anghenfil\Templater\TemplateParser::set_variable("title", $sm->get_title($site));
 		}else{
-			\ShitHub\Templater\TemplateParser::set_variable("title", "");
+			\anghenfil\Templater\TemplateParser::set_variable("title", "");
 		}
 
 		if(isset($_SESSION['login_userid'])){
-			\ShitHub\Templater\TemplateParser::set_variable("loginor", file_get_contents("templates/profil_menu.php"));
+			\anghenfil\Templater\TemplateParser::set_variable("loginor", file_get_contents("templates/profil_menu.php"));
 		}else{
-			\ShitHub\Templater\TemplateParser::set_variable("loginor", file_get_contents("templates/login/login_menu.php"));
+			\anghenfil\Templater\TemplateParser::set_variable("loginor", file_get_contents("templates/login/login_menu.php"));
 		}
 
-		\ShitHub\Templater\TemplateParser::set_variable("upload_error", "");
-		\ShitHub\Templater\TemplateParser::set_variable("upload_error_code", "");
+		\anghenfil\Templater\TemplateParser::set_variable("upload_error", "");
+		\anghenfil\Templater\TemplateParser::set_variable("upload_error_code", "");
 	}
 }

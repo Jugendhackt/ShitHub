@@ -61,7 +61,7 @@ class SiteConstructor{
 	}
 
 	private function printpart($filename){
-		$templater = new \ShitHub\Templater\TemplateParser($filename);
+		$templater = new \anghenfil\Templater\TemplateParser($filename);
 		$templater->parse();
 	}
 }
