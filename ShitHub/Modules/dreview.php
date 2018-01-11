@@ -28,8 +28,8 @@ class dreview{
 				$nums .= $i."\n";
 			}
 
-			\ShitHub\Templater\TemplateParser::set_variable("displaycode", $code);
-			\ShitHub\Templater\TemplateParser::set_variable("displaynums", $nums);
+			\anghenfil\Templater\TemplateParser::set_variable("displaycode", $code);
+			\anghenfil\Templater\TemplateParser::set_variable("displaynums", $nums);
 		}else{
 			header('Location: ?site=404');
 		}
