@@ -1,15 +1,22 @@
 <?php
-define("SECURITY", "TRUE");	
+define("SECURITY", "TRUE");
+define("CONFIG_PATH", "/var/www/html/");
+define("CONFIG_NAME", "config.env");
 
-require_once __DIR__ . '/vendor/autoload.php'; //Start autoloader
-$dotenv = new Dotenv\Dotenv('/var/www/', 'config.env'); //Path for config comes here
-$dotenv->load();
+//Install check:
+if(file_exists(install) && !file_exists(CONFIG_PATH.CONFIG_NAME)){
+    require_once("install/install.php");
+}else {
+    require_once __DIR__ . '/vendor/autoload.php'; //Start autoloader
+    $dotenv = new Dotenv\Dotenv(CONFIG_PATH, CONFIG_NAME); //Path for config comes here
+    $dotenv->load();
 
-if($_ENV['ERROR_LEVEL'] == "DEBUG"){
-	ini_set("display_errors", 1);
-}else{
-	ini_set("display_errors", 0);
+    if ($_ENV['ERROR_LEVEL'] == "DEBUG") {
+        ini_set("display_errors", 1);
+    } else {
+        ini_set("display_errors", 0);
+    }
+
+    $loader = new \ShitHub\Core\Loader();
+    $loader->load();
 }
-
-$loader = new \ShitHub\Core\Loader();
-$loader->load();
