@@ -23,3 +23,5 @@ You can obtain further informations on our [Wiki](../../wiki/)
 - Inline comments (Snippet view)
 - REST API
 - Automatic vulnerability scanner tools
+- Extend Wiki
+- Deliver installation script, which sets up database and config
