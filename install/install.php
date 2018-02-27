@@ -18,7 +18,13 @@ if(!isset($_POST['installform'])){ //If form wasn't submitted, show form
 
 <h1>ShitHub Installation</h1>');
 
-    if(!isset($_GET['step2'])) {
+    if(isset($_GET['step2'])) {
+        require_once("configure.php");
+    }elseif(isset($_GET['step3'])){
+        require_once("mysqlform.php");
+    }
+    else{
+        copy("install/index-backup.php", "index.php");
         //Check for prerequisites
         require_once("prerequisites-check.php");
         print("<h2>Check for prerequisites:</h2>");
@@ -28,8 +34,6 @@ if(!isset($_POST['installform'])){ //If form wasn't submitted, show form
         } else {
             print("<form action='#' method='get'><button type='submit' name='step2'>Proceed</button></form>");
         }
-    }else{
-        require_once("form.php");
     }
 }else{
 
