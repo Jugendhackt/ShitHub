@@ -1,4 +1,6 @@
-language: php
-  php:
+{
+"language": "php"
+"php":
     - '7.0'
-  install: php vendor/vendors.php
+"install": "php vendor/vendors.php"
+}
