@@ -2,5 +2,5 @@
 "php":
     - '7.0'
 "install": 
-    - composer self-update
-    - composer install
+    - "composer self-update"
+    - "composer install"
