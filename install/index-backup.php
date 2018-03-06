@@ -4,7 +4,7 @@ define("CONFIG_PATH", "{CONFIGPATH}");
 define("CONFIG_NAME", "config.env");
 
 //Install check:
-if(file_exists("install") && !file_exists(CONFIG_PATH.CONFIG_NAME)){
+if(file_exists("install") || !file_exists(CONFIG_PATH.CONFIG_NAME)){
     require_once("install/install.php");
 }else {
     if(!(@include_once __DIR__ . '/vendor/autoload.php')){

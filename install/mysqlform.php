@@ -89,7 +89,7 @@ $dbh->exec($tables);
             fwrite($file, $configappend);
             fclose($file);
 
-            print("<b style='color: green'>ShitHub installed succesfull! Please REMOVE INSTALL FOLDER!</b>");
+            print("<b style='color: green'>ShitHub installed succesfull! Please REMOVE INSTALL FOLDER AND DON'T START THE INSTALLATION AGAIN!</b>");
         }
     }
 }
