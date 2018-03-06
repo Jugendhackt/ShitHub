@@ -7,7 +7,9 @@ define("CONFIG_NAME", "config.env");
 if(file_exists("install") && !file_exists(CONFIG_PATH.CONFIG_NAME)){
     require_once("install/install.php");
 }else {
-    require_once __DIR__ . '/vendor/autoload.php'; //Start autoloader
+    if(!(@include_once __DIR__ . '/vendor/autoload.php')){
+        die("Please install composer first.");
+    }
     $dotenv = new Dotenv\Dotenv(CONFIG_PATH, CONFIG_NAME); //Path for config comes here
     $dotenv->load();
 
