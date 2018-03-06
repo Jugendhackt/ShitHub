@@ -24,7 +24,9 @@ if(!isset($_POST['installform'])){ //If form wasn't submitted, show form
         require_once("mysqlform.php");
     }
     else{
-        copy("install/index-backup.php", "index.php");
+        if(!copy("install/index-backup.php", "index.php")){
+            print("<b style=\"color: red\">Couldn't copy install/index-backup.php to index.php. Please do it manually!</b>");
+        }
         //Check for prerequisites
         require_once("prerequisites-check.php");
         print("<h2>Check for prerequisites:</h2>");
