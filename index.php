@@ -1,6 +1,6 @@
 <?php
 define("SECURITY", "TRUE");
-define("CONFIG_PATH", "/var/www/");
+define("CONFIG_PATH", "{CONFIGPATH}");
 define("CONFIG_NAME", "config.env");
 
 //Install check:
