@@ -11,7 +11,6 @@ if(!defined(SECURITY)){
     die();
 }
 
-if(!isset($_POST['installform'])){ //If form wasn't submitted, show form
     print('<!DOCTYPE html>
 <html>
 <body>
@@ -37,6 +36,3 @@ if(!isset($_POST['installform'])){ //If form wasn't submitted, show form
             print("<form action='#' method='get'><button type='submit' name='step2'>Proceed</button></form>");
         }
     }
-}else{
-
-}
