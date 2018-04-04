@@ -11,8 +11,6 @@ if(!defined(SECURITY)){
 
 class header{
 	public function call_modul(...$args){
-		session_start();
-
 		$site = $args[0];
 		$sm = new SiteManager();
 
