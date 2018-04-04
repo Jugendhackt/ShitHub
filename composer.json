@@ -12,7 +12,7 @@
     "require": {
         "monolog/monolog": "^1.23",
         "vlucas/phpdotenv": "^2.4",
-	"anghenfil/Templater": "0.1.0.x-dev",
+	"anghenfil/Templater": "0.2.5.x-dev",
         "scrivo/highlight.php": "v9.12.0.2"
     },
     "require-dev": {
