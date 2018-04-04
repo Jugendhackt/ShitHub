@@ -13,6 +13,7 @@ class dreview{
 	private $code;
 
 	public function call_modul(...$args){
+	    TemplateParser::$globalstore->push("customcss", "<link href=\"vendor/scrivo/highlight.php/styles/default.css\" rel=\"stylesheet\"");
 		$this->id = intval($_GET['id']);
 
 		$sql = new ShitHubSQL();
@@ -21,7 +22,7 @@ class dreview{
 		if($this->code != null && file_exists ('data/snippets/'.$this->id.'.snippet')){
 			$highlighter = new \Highlight\Highlighter();
             try {
-                $code = $highlighter->highlight('cpp', file_get_contents('data/snippets/' . $this->id . '.snippet'));
+                $code = $highlighter->highlight('cpp', html_entity_decode(file_get_contents('data/snippets/' . $this->id . '.snippet')));
             } catch (\Exception $e) {
                 //TODO: Handle error
             }
