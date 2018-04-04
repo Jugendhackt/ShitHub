@@ -16,8 +16,6 @@ class header{
 		$site = $args[0];
 		$sm = new SiteManager();
 
-		TemplateParser::$globalstore->set_variable("customcss", "");
-
 		if($sm->get_title($site) != null){
 			TemplateParser::$globalstore->set_variable("title", $sm->get_title($site));
 		}else{
