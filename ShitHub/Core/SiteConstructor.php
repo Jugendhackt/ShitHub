@@ -27,6 +27,7 @@ class SiteConstructor{
 			$this->site = '404';
 		}
         TemplateParser::$globalstore->set_variable("customcss", "");
+        session_start();
 
 		$this->loadModule($this->site); //Load site content
         $this->loadModule("header");
