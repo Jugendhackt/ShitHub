@@ -2,6 +2,8 @@
 
 namespace ShitHub\Core;
 
+use anghenfil\Templater\TemplateParser;
+
 if(!defined(SECURITY)){
 	die("Direct invocation isn't allowed.");
 }
@@ -24,41 +26,37 @@ class SiteConstructor{
 		if(!$this->sm->site_allowed($this->site)){
 			$this->site = '404';
 		}
+        TemplateParser::$globalstore->set_variable("customcss", "");
 
-		$this->load("header"); //Load header
-		$this->load($this->site); //Load site content
-		$this->load("footer"); //Load footer
+		$this->loadModule($this->site); //Load site content
+        $this->loadModule("header");
+        $this->loadTemplate("header"); //Load header
+        $this->loadTemplate($this->site);
+		$this->loadModule("footer");
+        $this->loadTemplate("footer");
 	}
 
-	private function load($what){
+	private function loadTemplate($what){
 		if($this->sm->site_allowed($this->site)){
 			if(file_exists(__DIR__.'/../../templates/'.$what.'.php')){
-				if(class_exists('\\ShitHub\\Modules\\'.$what)){
-
-					$cname = "ShitHub\\Modules\\".$what;
-					$modul = new $cname;
-
-					if(method_exists($modul, 'call_modul')){
-						$modul->call_modul($this->site);
-					}
-				}
-
 				$this->printpart(__DIR__.'/../../templates/'.$what.'.php');
 			}elseif(file_exists(__DIR__.'/../../templates/'.$what.'/'.$what.'.php')){
-				if(class_exists('\\ShitHub\\Modules\\'.$what)){
-
-					$cname = "ShitHub\\Modules\\".$what;
-					$modul = new $cname;
-
-					if(method_exists($modul, 'call_modul')){
-						$modul->call_modul($this->site);
-					}
-				}
-
 				$this->printpart(__DIR__.'/../../templates/'.$what.'/'.$what.'.php');
 			}
 		}
 	}
+
+	private function loadModule($what){
+        if(class_exists('\\ShitHub\\Modules\\'.$what)){
+
+            $cname = "ShitHub\\Modules\\".$what;
+            $modul = new $cname;
+
+            if(method_exists($modul, 'call_modul')){
+                $modul->call_modul($this->site);
+            }
+        }
+    }
 
 	private function printpart($filename){
 		$templater = new \anghenfil\Templater\TemplateParser($filename, null);
