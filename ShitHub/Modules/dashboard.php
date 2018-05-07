@@ -9,7 +9,7 @@ if(!defined(SECURITY)){
 	die("Direct invocation isn't allowed.");
 }
 
-class dashboard{
+class dashboard extends Module{
 	public function call_modul(...$args){
 		if(isset($_GET['tab'])){
 			$tab = $_GET['tab'];

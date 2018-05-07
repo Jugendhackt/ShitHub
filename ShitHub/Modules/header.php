@@ -9,7 +9,7 @@ if(!defined(SECURITY)){
 	die("Direct invocation isn't allowed.");
 }
 
-class header{
+class header extends Module{
 	public function call_modul(...$args){
 		$site = $args[0];
 		$sm = new SiteManager();

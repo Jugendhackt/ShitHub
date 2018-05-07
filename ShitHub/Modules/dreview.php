@@ -8,7 +8,7 @@ if(!defined(SECURITY)){
 	die("Direct invocation isn't allowed.");
 }
 
-class dreview{
+class dreview extends Module{
 	private $id;
 	private $snippet;
 

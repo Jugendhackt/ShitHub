@@ -10,7 +10,7 @@ if(!defined(SECURITY)){
 	die("Direct invocation isn't allowed.");
 }
 
-class login{
+class login extends Module{
 	public function call_modul(...$args){
 		TemplateParser::$globalstore->set_variable("loginerror", "");
 		TemplateParser::$globalstore->set_variable("logininfo", "");
