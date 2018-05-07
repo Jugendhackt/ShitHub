@@ -8,7 +8,6 @@
 
 namespace ShitHub\Modules;
 
-
 abstract class Module{
     abstract public function call_modul(...$args);
 }

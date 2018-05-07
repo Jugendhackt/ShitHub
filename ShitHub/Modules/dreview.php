@@ -4,10 +4,6 @@ namespace ShitHub\Modules;
 use anghenfil\Templater\TemplateParser;
 use ShitHub\SQL\ShitHubSQL;
 
-if(!defined(SECURITY)){
-	die("Direct invocation isn't allowed.");
-}
-
 class dreview extends Module{
 	private $id;
 	private $snippet;

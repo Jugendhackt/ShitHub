@@ -6,10 +6,6 @@ use anghenfil\Templater\TemplateParser;
 use anghenfil\Templater\VariableStore;
 use ShitHub\SQL\ShitHubSQL;
 
-if(!defined(SECURITY)){
-	die("Direct invocation isn't allowed.");
-}
-
 class login extends Module{
 	public function call_modul(...$args){
 		TemplateParser::$globalstore->set_variable("loginerror", "");

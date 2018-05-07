@@ -5,10 +5,6 @@ namespace ShitHub\Modules;
 use anghenfil\Templater\TemplateParser;
 use ShitHub\Core\SiteManager;
 
-if(!defined(SECURITY)){
-	die("Direct invocation isn't allowed.");
-}
-
 class header extends Module{
 	public function call_modul(...$args){
 		$site = $args[0];
