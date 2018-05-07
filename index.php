@@ -1,7 +1,10 @@
 <?php
+
+use anghenfil\Templater\TemplateParser;
+
 define("SECURITY", "TRUE");
-define("CONFIG_PATH", "{CONFIGPATH}");
-define("CONFIG_NAME", "config.env");
+define("CONFIG_PATH", "/var/www/");
+define("CONFIG_NAME", "config-old.env");
 
 //Install check:
 if(file_exists("install") || !file_exists(CONFIG_PATH.CONFIG_NAME)){
@@ -10,7 +13,7 @@ if(file_exists("install") || !file_exists(CONFIG_PATH.CONFIG_NAME)){
     if(!(@include_once __DIR__ . '/vendor/autoload.php')){
         die("Please install composer first.");
     }
-    $dotenv = new Dotenv\Dotenv(CONFIG_PATH, CONFIG_NAME); //Path for config comes here
+    $dotenv = new Dotenv\Dotenv(CONFIG_PATH, CONFIG_NAME);
     $dotenv->load();
 
     if ($_ENV['ERROR_LEVEL'] == "DEBUG") {
@@ -19,6 +22,7 @@ if(file_exists("install") || !file_exists(CONFIG_PATH.CONFIG_NAME)){
         ini_set("display_errors", 0);
     }
 
+    TemplateParser::init();
     $loader = new \ShitHub\Core\Loader();
     $loader->load();
 }

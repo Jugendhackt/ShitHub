@@ -15,7 +15,7 @@ die("Direct invocation isn't allowed.");
             <div class= "col codecol">
                 <pre class="precode">
                 	<code>
-{displaycode}
+                        {displaycode}
                 	</code>
              	</pre>
             </div>

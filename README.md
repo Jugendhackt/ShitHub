@@ -18,10 +18,9 @@ A: Well, there are many other Code review systems, but we don't knew any system 
 You can obtain further informations on our [Wiki](../../wiki/)
 
 # TODO List
-- Syntax highlighting (find a libary)
 - custom timezone/geoip based timezone
 - Inline comments (Snippet view)
 - REST API
 - Automatic vulnerability scanner tools
 - Extend Wiki
-- Deliver installation script, which sets up database and config
+- Filter html code in username (like snippet descriptions)

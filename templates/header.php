@@ -17,6 +17,7 @@ die("Direct invocation isn't allowed.");
 
     <!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
+      {customcss}
   </head>
 
   <body>

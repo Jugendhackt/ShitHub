@@ -1,35 +1,42 @@
 <?php
 namespace ShitHub\Modules;
 
+use anghenfil\Templater\TemplateParser;
+use ShitHub\SQL\ShitHubSQL;
+
 if(!defined(SECURITY)){
 	die("Direct invocation isn't allowed.");
 }
 
 class dreview{
 	private $id;
-	private $code;
+	private $snippet;
 
 	public function call_modul(...$args){
+	    TemplateParser::$globalstore->push("customcss", "<link href=\"vendor/scrivo/highlight.php/styles/default.css\" rel=\"stylesheet\"");
 		$this->id = intval($_GET['id']);
 
-		$sql = new \ShitHub\SQL\ShitHubSQL();
+		$sql = new ShitHubSQL();
+		$this->snippet = $sql->load_snippet($this->id);
 
-		$this->code = $sql->load_snippet($this->id);
+		if($this->snippet != null && file_exists ('data/snippets/'.$this->id.'.snippet')){
+			$highlighter = new \Highlight\Highlighter();
+            try {
+                $code = $highlighter->highlight($this->snippet['language'], html_entity_decode(file_get_contents('data/snippets/' . $this->id . '.snippet')));
+                $codearray = explode("\n", $code->value);
+                $size = sizeof($codearray);
+                unset($codearray);
 
-		if($this->code != null && file_exists ('data/snippets/'.$this->id.'.snippet')){
-			$code = file_get_contents('data/snippets/'.$this->id.'.snippet');
-			$codearray = explode("\n", $code);
-			$size = sizeof($codearray);
-			unset($codearray);
+                $nums = "";
+                for($i = 0;$i<$size;$i++){
+                    $nums .= $i."\n";
+                }
 
-			$nums = "";
-			$i = 1;
-			for($i = 0;$i<$size;$i++){
-				$nums .= $i."\n";
-			}
-
-			\anghenfil\Templater\TemplateParser::set_variable("displaycode", $code);
-			\anghenfil\Templater\TemplateParser::set_variable("displaynums", $nums);
+                TemplateParser::$globalstore->set_variable("displaycode", $code->value);
+                TemplateParser::$globalstore->set_variable("displaynums", $nums);
+            } catch (\Exception $e) {
+                //TODO: Error handling
+            }
 		}else{
 			header('Location: ?site=404');
 		}
