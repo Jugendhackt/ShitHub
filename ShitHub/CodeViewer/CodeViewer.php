@@ -9,5 +9,7 @@
 namespace ShitHub\CodeViewer;
 
 class CodeViewer{
+    public function __construct(){
 
+    }
 }
