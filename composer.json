@@ -23,7 +23,8 @@
             "ShitHub\\Core\\": "ShitHub/Core",
             "ShitHub\\Modules\\": "ShitHub/Modules",
             "ShitHub\\SQL\\": "ShitHub/SQL",
-            "ShitHub\\CodeViewer\\": "ShitHub/CodeViewer"
+            "ShitHub\\CodeViewer\\": "ShitHub/CodeViewer",
+            "ShitHub\\Exception\\": "ShitHub/Exception"
         }
     }
 }
