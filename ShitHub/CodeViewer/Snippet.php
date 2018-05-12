@@ -74,7 +74,5 @@ class Snippet{
             throw new \InvalidPathException();
         }
     }
-
-
-
+    
 }
