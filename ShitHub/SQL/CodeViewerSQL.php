@@ -20,4 +20,9 @@ class CodeViewerSQL{
         //TODO: create method body
         return array();
     }
+
+    public function checkSnippetID($snippet, $project){
+        //TODO: create method body
+        return true;
+    }
 }
