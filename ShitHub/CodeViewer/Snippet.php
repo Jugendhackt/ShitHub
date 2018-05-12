@@ -19,6 +19,7 @@ class Snippet{
     private $author_name;
     private $status;
     private $date;
+    private $filepath;
 
     public function __construct($id, $title, $description, $language, $tags, $author_id, $author_name, $status, $date){
         if (!empty($this)) {
@@ -65,6 +66,12 @@ class Snippet{
             $this->date = $date;
         }else{
             throw new \InvalidArgumentException("Parameter must be declared and not empty");
+        }
+
+        if(file_exists($_ENV['UPLOAD_DIR'].'/'.$id.'.snippet')){
+            $this->filepath = $_ENV['UPLOAD_DIR'].'/'.$id.'.snippet';
+        }else{
+            throw new \InvalidPathException();
         }
     }
 
