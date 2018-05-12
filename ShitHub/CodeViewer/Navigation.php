@@ -41,4 +41,8 @@ class Navigation{
             throw new \InvalidArgumentException("snippetID as first parameter required");
         }
     }
+
+    public function generateNavigation(){
+
+    }
 }
