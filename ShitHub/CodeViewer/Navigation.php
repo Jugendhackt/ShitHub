@@ -15,6 +15,10 @@ class Navigation{
     private $activeSnippet;
     private $projectSnippets = array();
 
+    /**
+     * Navigation constructor.
+     * @param integer $project project ID
+     */
     public function __construct($project){
         if(!is_null($project) && is_int($project)){ //Check if projectID submitted
             $db = new CodeViewerSQL();
@@ -30,6 +34,9 @@ class Navigation{
         }
     }
 
+    /**
+     * @param integer $snippet set snippet as active
+     */
     public function setActive($snippet){
         if(!is_null($snippet) && is_int($snippet)){
             if(in_array($snippet, $this->projectSnippets)){
@@ -42,6 +49,9 @@ class Navigation{
         }
     }
 
+    /**
+     * Generate navigation
+     */
     public function generateNavigation(){
 
     }
