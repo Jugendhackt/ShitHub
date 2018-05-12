@@ -22,7 +22,8 @@
         "psr-4": {
             "ShitHub\\Core\\": "ShitHub/Core",
             "ShitHub\\Modules\\": "ShitHub/Modules",
-            "ShitHub\\SQL\\": "ShitHub/SQL"
+            "ShitHub\\SQL\\": "ShitHub/SQL",
+            "ShitHub\\CodeViewer\\": "ShitHub/CodeViewer"
         }
     }
 }
