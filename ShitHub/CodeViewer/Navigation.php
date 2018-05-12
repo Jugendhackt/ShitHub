@@ -9,11 +9,16 @@
 namespace ShitHub\CodeViewer;
 
 class Navigation{
-    public function __construct($project){
+    private $projectID;
 
+    public function __construct($project){
+        if(!is_null($project)){ //Check if projectID submitted
+            $this->projectID = $project;
+        }else{
+            throw new \InvalidArgumentException("projectID as first parameter required");
+        }
     }
 
     public function setActive(){
-
     }
 }
