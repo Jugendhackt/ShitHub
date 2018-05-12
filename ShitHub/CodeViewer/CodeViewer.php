@@ -29,9 +29,9 @@ class CodeViewer{
             if($db->checkProjectID($project)) {
                 $this->projectID = $project; //Assign projectid
 
-                if (!is_null($snippet)) { //Check snippetID
-                    if (is_int($snippet)) {
-                        if($db->checkSnippetID($snippet, $project)) {
+                if (!is_null($snippet)) {
+                    if (is_int($snippet)) { //Check if snippetID is int
+                        if($db->checkSnippetID($snippet, $project)) { //Check if snippetID is in project
                             $this->activeSnippet = $snippet;
                         }else{
                             throw new \InvalidArgumentException("snippet doesn't belong to project");
@@ -40,7 +40,7 @@ class CodeViewer{
                         throw new \InvalidArgumentException("snippetID as second parameter must be int or unset");
                     }
                 }
-                if (is_bool($editmode)) {
+                if (is_bool($editmode)) { //Check if editmode is bool
                     $this->mode = $editmode;
                 } else {
                     throw new \InvalidArgumentException("mode as second parameter must be boolean: false (read) or true (read/write)");
@@ -55,6 +55,9 @@ class CodeViewer{
         }
     }
 
+    /**
+     * Shows CodeViewer
+     */
     public function show(){
 
     }
