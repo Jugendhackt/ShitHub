@@ -15,6 +15,7 @@ class CodeViewer{
     private $activeSnippet = null;
     private $mode;
     private $navigation;
+    private $snippetview;
 
     /**
      * CodeViewer constructor.
@@ -26,6 +27,7 @@ class CodeViewer{
         if (self::checkProject($project)) {
             $this->projectID = $project;
             $this->navigation = new Navigation($project);
+            $this->snippetview = new SnippetView();
 
             if (!is_null($snippet)) {
                 if (self::checkSnippet($snippet)) {
@@ -53,6 +55,7 @@ class CodeViewer{
      */
     public function show(){
         $this->navigation->generateNavigation();
+        $this->snippetview->generateSnippetView();
     }
 
     static public function checkSnippet($snippet){
