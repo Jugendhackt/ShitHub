@@ -20,17 +20,12 @@ class Navigation{
      * @param integer $project project ID
      */
     public function __construct($project){
-        if(!is_null($project) && is_int($project)){ //Check if projectID submitted
-            $db = new CodeViewerSQL();
-            if($db->checkProjectID($project)) {
+        if(CodeViewer::checkProject($project)){
+                $db = new CodeViewerSQL();
                 $this->projectID = $project;
-
                 $this->projectSnippets = $db->fetchSnippets($project);
-            }else{
-                throw new \InvalidArgumentException("projectID not valid");
-            }
         }else{
-            throw new \InvalidArgumentException("projectID as first parameter (int) required");
+            throw new \InvalidArgumentException("valid projectID as first parameter (int) required");
         }
     }
 
@@ -38,7 +33,7 @@ class Navigation{
      * @param integer $snippet set snippet as active
      */
     public function setActive($snippet){
-        if(!is_null($snippet) && is_int($snippet)){
+        if(CodeViewer::checkSnippet($snippet)){
             if(in_array($snippet, $this->projectSnippets)){
                 $this->activeSnippet = $snippet;
             }else{
