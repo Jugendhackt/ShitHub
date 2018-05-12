@@ -16,7 +16,7 @@ class Navigation{
     private $projectSnippets = array();
 
     public function __construct($project){
-        if(!is_null($project)){ //Check if projectID submitted
+        if(!is_null($project) && is_int($project)){ //Check if projectID submitted
             $db = new CodeViewerSQL();
             if($db->checkProjectID($project)) {
                 $this->projectID = $project;
@@ -26,19 +26,19 @@ class Navigation{
                 throw new \InvalidArgumentException("projectID not valid");
             }
         }else{
-            throw new \InvalidArgumentException("projectID as first parameter required");
+            throw new \InvalidArgumentException("projectID as first parameter (int) required");
         }
     }
 
     public function setActive($snippet){
-        if(!is_null($snippet)){
+        if(!is_null($snippet) && is_int($snippet)){
             if(in_array($snippet, $this->projectSnippets)){
                 $this->activeSnippet = $snippet;
             }else{
                 throw new \InvalidArgumentException("snippet doesn't belong to project");
             }
         }else{
-            throw new \InvalidArgumentException("snippetID as first parameter required");
+            throw new \InvalidArgumentException("snippetID as first parameter (int) required");
         }
     }
 
