@@ -12,7 +12,12 @@ namespace ShitHub\SQL;
 class CodeViewerSQL{
 
     public function checkProjectID($project){
-        //TODO: create method content
+        //TODO: create method body
         return true;
+    }
+
+    public function fetchSnippets($project){
+        //TODO: create method body
+        return array();
     }
 }
