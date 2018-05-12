@@ -11,4 +11,8 @@ namespace ShitHub\SQL;
 
 class CodeViewerSQL{
 
+    public function checkProjectID($project){
+        //TODO: create method content
+        return true;
+    }
 }
