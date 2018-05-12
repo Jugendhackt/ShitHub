@@ -18,9 +18,14 @@ A: Well, there are many other Code review systems, but we don't knew any system 
 You can obtain further informations on our [Wiki](../../wiki/)
 
 # TODO List
-- custom timezone/geoip based timezone
-- Inline comments (Snippet view)
 - REST API
-- Automatic vulnerability scanner tools
+- almost whole ShitHub Daemon
+- custom timezone/geoip based timezone
+- connection with ShitHub Daemon
+- user profile
+- tests for PHPUnit
+- GitHub conection
+- source code viewer
 - Extend Wiki
 - Filter html code in username (like snippet descriptions)
+- Unit tests via ShitHubDaemon
