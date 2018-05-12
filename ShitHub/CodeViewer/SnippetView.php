@@ -10,11 +10,7 @@ namespace ShitHub\CodeViewer;
 
 
 class SnippetView{
-    private $snippetID;
-
-    public function __construct(){
-
-    }
+    private $snippet;
 
     public function generateSnippetView(){
 
