@@ -8,12 +8,19 @@
 
 namespace ShitHub\CodeViewer;
 
+use ShitHub\SQL\CodeViewerSQL;
+
 class Navigation{
     private $projectID;
 
     public function __construct($project){
         if(!is_null($project)){ //Check if projectID submitted
-            $this->projectID = $project;
+            $db = new CodeViewerSQL();
+            if($db->checkProjectID($project)) {
+                $this->projectID = $project;
+            }else{
+                throw new \InvalidArgumentException("projectID not valid");
+            }
         }else{
             throw new \InvalidArgumentException("projectID as first parameter required");
         }
