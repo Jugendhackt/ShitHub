@@ -5,17 +5,8 @@ if(!defined(SECURITY)){
 	die("Direct invocation isn't allowed.");
 }
 
-class ShitHubSQL{
+class ShitHubSQL extends SQL{
 
-	private $pdo = null; //pdo object
-
-	public function __construct(){
-		try{
-			$this->pdo = new \PDO('mysql:host='.$_ENV['DB_HOST'].';dbname='.$_ENV['DB_NAME'],$_ENV['DB_UNAME'],$_ENV['DB_PW']);
-		}catch(\PDOException $e){
-			\ShitHub\Core\Loader::getLogger()->alert('PDOException: '.$e->getMessage());
-		}
-	}
 	public function save_snippet($title, $description, $language, $tags, $author_id, $author_name){
 		if($this->pdo != null){
 			$query = $this->pdo->prepare("INSERT INTO snippets (title, description, language, tags, author_id, author_name, date) VALUES (?, ?, ?, ?, ?, ?, ?);");
@@ -25,7 +16,7 @@ class ShitHubSQL{
 				\ShitHub\Core\Loader::getLogger()->alert('SQL Error: '.$query->queryString.': '.$query->errorInfo()[2]);
 			}
 		}else{
-			die("Database seems to be offline. Please try again later.");
+			SQL::offlineErr();
 		}
 	}
 	public function delete_snippet($id){
@@ -38,7 +29,7 @@ class ShitHubSQL{
 				return false;
 			}
 		}else{
-			die("Database seems to be offline. Please try again later.");
+			SQL::offlineErr();
 		}
 	}
 	public function load_snippet($id){
@@ -49,7 +40,7 @@ class ShitHubSQL{
 			
 			return $row;
 		}else{
-			die("Database seems to be offline. Please try again later.");
+			SQL::offlineErr();
 		}
 	}
 	public function get_user($id){
@@ -60,7 +51,7 @@ class ShitHubSQL{
 			
 			return $row;
 		}else{
-			die("Database seems to be offline. Please try again later.");
+			SQL::offlineErr();
 		}
 	}
 	public function get_discussed_reviews(int $anz){
@@ -76,7 +67,7 @@ class ShitHubSQL{
 			
 			return $array;
 		}else{
-			die("Database seems to be offline. Please try again later.");
+			SQL::offlineErr();
 		}
 	}
 
@@ -93,7 +84,7 @@ class ShitHubSQL{
 
 			return $array;
 		}else{
-			die("Database seems to be offline. Please try again later.");
+			SQL::offlineErr();
 		}
 	}
 	public function check_login($uname, $pword){
@@ -119,7 +110,7 @@ class ShitHubSQL{
 				\ShitHub\Core\Loader::getLogger()->alert('SQL Error: '.$query->queryString.': '.$query->errorInfo()[2]);
 			}
 		}else{
-			die("Database seems to be offline. Please try again later.");
+			SQL::offlineErr();
 		}	
 	}
 	private function update_last_login($id){
@@ -129,7 +120,7 @@ class ShitHubSQL{
 				\ShitHub\Core\Loader::getLogger()->alert('SQL Error: '.$query->queryString.': '.$query->errorInfo()[2]);
 			}
 		}else{
-			die("Database seems to be offline. Please try again later.");
+			SQL::offlineErr();
 		}	
 	}
 }
