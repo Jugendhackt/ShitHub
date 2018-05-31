@@ -25,4 +25,5 @@ if(file_exists("install") || !file_exists(CONFIG_PATH.CONFIG_NAME)){
     TemplateParser::init();
     $loader = new \ShitHub\Core\Loader();
     $loader->load();
+    $loader->construct();
 }

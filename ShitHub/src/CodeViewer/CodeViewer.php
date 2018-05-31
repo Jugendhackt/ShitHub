@@ -55,7 +55,12 @@ class CodeViewer{
      */
     public function show(){
         $this->navigation->generateNavigation();
-        $this->snippetview->generateSnippetView();
+        if(!is_null($this->activeSnippet)) {
+            $db = new CodeViewerSQL();
+            $this->snippetview->generateSnippetView($db->getSnippet($this->activeSnippet));
+        }else{
+            //TODO fill in
+        }
     }
 
     static public function checkSnippet($snippet){

@@ -30,11 +30,13 @@ class Loader{
 		}
 
 		\Monolog\ErrorHandler::register(Loader::$logger);
-
-		$constructor = new \ShitHub\Core\SiteConstructor();
-
-		$constructor->construct();
 	}
+
+	public function construct(){
+        $constructor = new \ShitHub\Core\SiteConstructor();
+
+        $constructor->construct();
+    }
 
 	public static function getLogger(){
 		return Loader::$logger;

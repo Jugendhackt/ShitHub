@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7c1e40fa-ff27-4905-aa24-54173bd0133a" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/ShitHub/index.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ShitHub/tests/CodeViewer.php" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/CodeViewer/CodeViewer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/CodeViewer/Navigation.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/CodeViewer/Snippet.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/CodeViewer/SnippetView.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Core/Loader.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Core/SiteConstructor.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Core/SiteManager.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Exception/InvalidPathException.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Modules/Module.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Modules/codeviewer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Modules/dashboard.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Modules/dreview.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Modules/header.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Modules/login.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Modules/logout.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Modules/u_settings.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/Modules/upload.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/SQL/CodeViewerSQL.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/SQL/SQL.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShitHub/SQL/ShitHubSQL.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change beforePath="$PROJECT_DIR$/data/shithub.log" afterPath="$PROJECT_DIR$/data/shithub.log" />
+      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change beforePath="$PROJECT_DIR$/install/index-backup.php" afterPath="$PROJECT_DIR$/install/index-backup.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <executablePath>composer</executablePath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CodeViewer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ShitHub/tests/CodeViewer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Navigation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ShitHub/src/CodeViewer/Navigation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#130#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CodeViewer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ShitHub/src/CodeViewer/CodeViewer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="59" column="91" lean-forward="false" selection-start-line="59" selection-start-column="91" selection-end-line="59" selection-end-column="91" />
+              <folding>
+                <element signature="e#2131#2426#0#PHP" expanded="false" />
+                <element signature="e#2432#2704#0#PHP" expanded="false" />
+                <element signature="e#2710#3060#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SnippetView.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ShitHub/src/CodeViewer/SnippetView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Snippet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ShitHub/src/CodeViewer/Snippet.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2643">
+              <caret line="235" column="5" lean-forward="true" selection-start-line="235" selection-start-column="5" selection-end-line="235" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dreview.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/dreview.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="15" column="55" lean-forward="true" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>file_exists</find>
+      <find>die(&quot;Database seems to be offline. Please try again later.&quot;);</find>
+      <find>.</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>SQL::offlineErr();</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ShitHub/Modules/dashboard.php" />
+        <option value="$PROJECT_DIR$/ShitHub/Modules/header.php" />
+        <option value="$PROJECT_DIR$/ShitHub/Modules/login.php" />
+        <option value="$PROJECT_DIR$/ShitHub/Modules/logout.php" />
+        <option value="$PROJECT_DIR$/ShitHub/Modules/Module.php" />
+        <option value="$PROJECT_DIR$/ShitHub/Modules/u_settings.php" />
+        <option value="$PROJECT_DIR$/ShitHub/Modules/upload.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/documentation/diagrams/CodeViewer.puml" />
+        <option value="$PROJECT_DIR$/ShitHub/Modules/codeviewer.php" />
+        <option value="$PROJECT_DIR$/templates/codeviewer/codeviewer.php" />
+        <option value="$PROJECT_DIR$/ShitHub/Modules/dreview.php" />
+        <option value="$PROJECT_DIR$/ShitHub/CodeViewer/Navigation.php" />
+        <option value="$PROJECT_DIR$/ShitHub/Exception/InvalidPathException.php" />
+        <option value="$PROJECT_DIR$/ShitHub/CodeViewer/Snippet.php" />
+        <option value="$PROJECT_DIR$/ShitHub/SQL/SQL.php" />
+        <option value="$PROJECT_DIR$/ShitHub/SQL/ShitHubSQL.php" />
+        <option value="$PROJECT_DIR$/ShitHub/SQL/CodeViewerSQL.php" />
+        <option value="$PROJECT_DIR$/ShitHub/CodeViewer/SnippetView.php" />
+        <option value="$PROJECT_DIR$/ShitHub/CodeViewer/CodeViewer.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/ShitHub/src/SQL/SQL.php" />
+        <option value="$PROJECT_DIR$/ShitHub/src/Core/Loader.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/install/index-backup.php" />
+        <option value="$PROJECT_DIR$/ShitHub/tests/CodeViewer.php" />
+        <option value="$PROJECT_DIR$/ShitHub/src/CodeViewer/CodeViewer.php" />
+        <option value="$PROJECT_DIR$/ShitHub/src/CodeViewer/Snippet.php" />
+        <option value="$PROJECT_DIR$/ShitHub/src/Modules/dreview.php" />
+        <option value="$PROJECT_DIR$/ShitHub/src/CodeViewer/SnippetView.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/anghenfil/templater" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="392" />
+    <option name="y" value="88" />
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ShitHub-codeviewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShitHub-codeviewer" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ShitHub-codeviewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShitHub-codeviewer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="install" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ShitHub-codeviewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShitHub-codeviewer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ShitHub" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ShitHub-codeviewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShitHub-codeviewer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ShitHub" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ShitHub-codeviewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShitHub-codeviewer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ShitHub" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CodeViewer" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ShitHub-codeviewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShitHub-codeviewer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ShitHub" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Core" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ShitHub-codeviewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShitHub-codeviewer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ShitHub" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ShitHub-codeviewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShitHub-codeviewer" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ShitHub" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SQL" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="Comm&#9;ACTION&#9;CheckinProject&#10;Git&#9;ACTION&#9;Git.Menu&#10;Commi&#9;ACTION&#9;CheckinProject&#10;Plant&#9;ACTION&#9;ActivatePlantUMLToolWindow&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;Diagram&#9;ACTION&#9;UML.Group.Simple" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ShitHub/tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ShitHub/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c1e40fa-ff27-4905-aa24-54173bd0133a" name="Default" comment="" />
+      <created>1525340769317</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1525340769317</updated>
+      <workItem from="1525340770831" duration="1766000" />
+      <workItem from="1525347514459" duration="804000" />
+      <workItem from="1525354685627" duration="470000" />
+      <workItem from="1525678751596" duration="2204000" />
+      <workItem from="1526084690804" duration="640000" />
+      <workItem from="1526122091098" duration="1499000" />
+      <workItem from="1526123639856" duration="8904000" />
+      <workItem from="1526384078432" duration="2785000" />
+      <workItem from="1526477958825" duration="1152000" />
+      <workItem from="1526550919599" duration="3309000" />
+      <workItem from="1527674127287" duration="5000" />
+      <workItem from="1527680185271" duration="3967000" />
+      <workItem from="1527767602891" duration="1066000" />
+    </task>
+    <task id="LOCAL-00001" summary="Single modules now inherit from Module class -&gt; Added Module class and extends Module">
+      <created>1525680763722</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1525680763722</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Removed old unusedclass. TemplateParser was moved to anghenfil/Templater versions ago.">
+      <created>1526085249887</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1526085249887</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated TODO list">
+      <created>1526122667201</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1526122667201</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Created namespace CodeViewer and created CodeViewer class; Updated composer.json">
+      <created>1526123128433</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526123128433</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added class Navigation; Added constructor for CodeViewer">
+      <created>1526124398716</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1526124398716</updated>
+    </task>
+    <task id="LOCAL-00006" summary="check for projectID as parameter">
+      <created>1526124557799</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1526124557800</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added new SQL class for codeviewer">
+      <created>1526124679229</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1526124679229</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added empty checkProjectID to CodeViewerSQL as placeholder">
+      <created>1526124820624</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1526124820625</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Check if projectID is valid">
+      <created>1526124848146</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1526124848146</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added method setActive($snippet) to Navigation; Created empty fetchSnippets method to CodeViewerSQL">
+      <created>1526125277692</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1526125277692</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Created empty codeviewer template">
+      <created>1526125759547</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1526125759547</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Check if parameter $snippet and $project is int -&gt; throw exception if not">
+      <created>1526126984220</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1526126984221</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added constructor and activeSnippet, mode and projectID attributes">
+      <created>1526127619519</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1526127619519</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added checkSnippetID method to single check if snippet belongs to project">
+      <created>1526128199257</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1526128199257</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added checkSnippetID method to single check">
+      <created>1526128234010</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1526128234010</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added PHPDoc">
+      <created>1526128416164</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1526128416164</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added comments and PHPDoc">
+      <created>1526128482552</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1526128482552</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Moved project and snippet check to static methods to use in other classes">
+      <created>1526130323410</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1526130323410</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Use new static methods from CodeView to check parameter">
+      <created>1526130503409</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1526130503409</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added class SnippetView">
+      <created>1526130518869</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1526130518869</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Call generateSnippetView() and create SnippetView object">
+      <created>1526131244395</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1526131244396</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added Snippet class">
+      <created>1526131263269</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1526131263269</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Created InvalidPathException">
+      <created>1526132280394</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1526132280394</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Check filepath and save if correct">
+      <created>1526132303914</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1526132303914</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Updated composer.json">
+      <created>1526132316066</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1526132316066</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added Snippet as parameter to generateSnippetView">
+      <created>1526132544341</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1526132544341</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Created SQL class; outsourced constructor from ShitHubSQL">
+      <created>1526387224135</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1526387224135</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Outsourced constructor to SQL; Now call SQL::offlineErr() instead of die instantly">
+      <created>1526387459377</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1526387459377</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="28571000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="392" y="88" width="1366" height="768" extended-state="6" />
+    <layout>
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created namespace CodeViewer and created CodeViewer class; Updated composer.json" />
+    <MESSAGE value="Added class Navigation; Added constructor for CodeViewer" />
+    <MESSAGE value="check for projectID as parameter" />
+    <MESSAGE value="Added new SQL class for codeviewer" />
+    <MESSAGE value="Added empty checkProjectID to CodeViewerSQL as placeholder" />
+    <MESSAGE value="Check if projectID is valid" />
+    <MESSAGE value="Added method setActive($snippet) to Navigation; Created empty fetchSnippets method to CodeViewerSQL" />
+    <MESSAGE value="Created empty codeviewer template" />
+    <MESSAGE value="Check if parameter $snippet and $project is int -&gt; throw exception if not" />
+    <MESSAGE value="Added constructor and activeSnippet, mode and projectID attributes" />
+    <MESSAGE value="Added checkSnippetID method to single check if snippet belongs to project" />
+    <MESSAGE value="Added checkSnippetID method to single check" />
+    <MESSAGE value="Added PHPDoc" />
+    <MESSAGE value="Added comments and PHPDoc" />
+    <MESSAGE value="Moved project and snippet check to static methods to use in other classes" />
+    <MESSAGE value="Use new static methods from CodeView to check parameter" />
+    <MESSAGE value="Added class SnippetView" />
+    <MESSAGE value="Call generateSnippetView() and create SnippetView object" />
+    <MESSAGE value="Added Snippet class" />
+    <MESSAGE value="Created InvalidPathException" />
+    <MESSAGE value="Check filepath and save if correct" />
+    <MESSAGE value="Updated composer.json" />
+    <MESSAGE value="Added Snippet as parameter to generateSnippetView" />
+    <MESSAGE value="Created SQL class; outsourced constructor from ShitHubSQL" />
+    <MESSAGE value="Outsourced constructor to SQL; Now call SQL::offlineErr() instead of die instantly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Outsourced constructor to SQL; Now call SQL::offlineErr() instead of die instantly" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/u_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/CodeViewer/CodeViewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#2131#2426#0#PHP" expanded="false" />
+            <element signature="e#2432#2704#0#PHP" expanded="false" />
+            <element signature="e#2710#3060#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/dreview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/u_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/dreview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="506">
+            <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/u_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documentation/diagrams/CodeViewer.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/codeviewer/codeviewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/codeviewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="43" column="83" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/vlucas/phpdotenv/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/ExceptionInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Dotenv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/ValidationException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/InvalidCallbackException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/InvalidPathException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Exception/InvalidPathException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/vlucas/phpdotenv/src/Exception/InvalidFileException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/SQL/ShitHubSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="82" column="13" lean-forward="true" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/default_config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/index-backup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/install.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/SQL/CodeViewerSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/CodeViewer/Navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#130#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/SQL/SQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Core/Loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/tests/CodeViewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/CodeViewer/CodeViewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="59" column="91" lean-forward="false" selection-start-line="59" selection-start-column="91" selection-end-line="59" selection-end-column="91" />
+          <folding>
+            <element signature="e#2131#2426#0#PHP" expanded="false" />
+            <element signature="e#2432#2704#0#PHP" expanded="false" />
+            <element signature="e#2710#3060#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/Modules/dreview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="55" lean-forward="true" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/CodeViewer/Snippet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2643">
+          <caret line="235" column="5" lean-forward="true" selection-start-line="235" selection-start-column="5" selection-end-line="235" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShitHub/src/CodeViewer/SnippetView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

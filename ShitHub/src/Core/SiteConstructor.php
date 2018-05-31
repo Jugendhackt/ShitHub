@@ -39,10 +39,10 @@ class SiteConstructor{
 
 	private function loadTemplate($what){
 		if($this->sm->site_allowed($this->site)){
-			if(file_exists(__DIR__.'/../../templates/'.$what.'.php')){
-				$this->printpart(__DIR__.'/../../templates/'.$what.'.php');
-			}elseif(file_exists(__DIR__.'/../../templates/'.$what.'/'.$what.'.php')){
-				$this->printpart(__DIR__.'/../../templates/'.$what.'/'.$what.'.php');
+			if(file_exists(__DIR__ . '/../../templates/' .$what.'.php')){
+				$this->printpart(__DIR__ . '/../../templates/' .$what.'.php');
+			}elseif(file_exists(__DIR__ . '/../../templates/' .$what.'.php')){
+				$this->printpart(__DIR__ . '/../../templates/' .$what.'.php');
 			}
 		}
 	}

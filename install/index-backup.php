@@ -21,4 +21,5 @@ if(file_exists("install") || !file_exists(CONFIG_PATH.CONFIG_NAME)){
 
     $loader = new \ShitHub\Core\Loader();
     $loader->load();
+    $loader->construct();
 }
