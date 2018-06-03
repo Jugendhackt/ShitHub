@@ -24,7 +24,7 @@ You can obtain further informations on our [Wiki](../../wiki/)
 - connection with ShitHub Daemon
 - user profile
 - tests for PHPUnit
-- GitHub conection
+- GitHub connection
 - source code viewer
 - Extend Wiki
 - Filter html code in username (like snippet descriptions)
