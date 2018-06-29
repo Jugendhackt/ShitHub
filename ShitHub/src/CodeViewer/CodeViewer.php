@@ -8,6 +8,7 @@
 
 namespace ShitHub\CodeViewer;
 
+use anghenfil\Templater\TemplateParser;
 use ShitHub\SQL\CodeViewerSQL;
 
 class CodeViewer{
@@ -51,15 +52,23 @@ class CodeViewer{
     }
 
     /**
-     * Shows CodeViewer
+     * Shows CodeViewer: generates SnippetView and navigation
      */
     public function show(){
         $this->navigation->generateNavigation();
         if(!is_null($this->activeSnippet)) {
             $db = new CodeViewerSQL();
-            $this->snippetview->generateSnippetView($db->getSnippet($this->activeSnippet));
+            $vs = $this->snippetview->generateSnippetView($db->getSnippet($this->activeSnippet));
+
+            if(!is_null($vs)){ //Parse snippetview with returned values
+                $tp1 = new TemplateParser("templates/codeviewer/snippetview.php", $vs);
+                TemplateParser::$globalstore->set_variable("codeviewer", $tp1->parse());
+            }else{
+                //TODO: fill in
+            }
+            //Set editmode in html
         }else{
-            //TODO fill in
+            //TODO: fill in
         }
     }
 
